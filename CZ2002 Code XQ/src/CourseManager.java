@@ -1,15 +1,25 @@
-import java.sql.SQLOutput;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class CourseManager {
-    private Course[] courselist;
+    private SortedMap<Integer, Course> coursemap = new TreeMap<Integer, Course>();
+    
+    
     Scanner sc = new Scanner(System.in);
 
 
     public void addCourse(){
         System.out.println("Enter course ID: ");
-        int courseID = sc.nextInt();
-        Course course = new Course (courseID);
+        int courseID;
+        do {
+        	courseID = sc.nextInt();
+        	if (coursemap.get(courseID) != null) {
+        		System.out.println("Course ID " + Integer.toString(courseID) + " has already been assigned to " + coursemap.get(courseID).getName());
+        	}
+        } while (coursemap.get(courseID) != null);
+        
+        Course course1 = new Course (courseID);
+        course1.createLabGroups(groups);
 
         System.out.println("Enter name of course: ");
         course.setName(sc.nextLine());
@@ -29,4 +39,9 @@ public class CourseManager {
     public Boolean checkVacancy(Course course){
         return false;
     }
+
+	public Course[] getCourselist() {
+		return courselist;
+	}
+
 }
