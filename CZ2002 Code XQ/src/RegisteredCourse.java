@@ -1,37 +1,46 @@
-public class RegisteredCourse {
-    private Component[] courseworkMark;
-    private int examMark;
-    private int totalMark;
+import java.util.ArrayList;
+
+public class RegisteredCourse{
+    private String courseName;
     private String courseId;
-    private int tutGroup;
-    private int labGroup;
+    private ArrayList<Component> components;
 
-    public int getExamMark() {
-        return examMark;
+    public RegisteredCourse(String courseName, String courseId, ArrayList<Component> components) {
+        this.courseName = courseName;
+        this.courseId = courseId;
+        this.components = components;
     }
 
-    public void setExamMark(int examMark) {
-        this.examMark = examMark;
+    public int calculateResults() {
+        int sum = 0;
+        for(Component c : components) {
+            sum += (c.getMarks())*(c.getWeight()/100);
+        }
+        return sum;
+
     }
 
-    public int getTotalMark() {
-        return totalMark;
+    public String getCourseName() {
+        return courseName;
     }
 
-    public void setTotalMark(int totalMark) {
-        this.totalMark = totalMark;
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
-    public Component[] getCourseworkMark() {
-        return courseworkMark;
+    public String getCourseId() {
+        return courseId;
     }
 
-    public void setCourseworkMark(Component[] courseworkMark) {
-        this.courseworkMark = courseworkMark;
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
-    public int calculateTotalMark(){
-        //plcaeholder
-        return 0;
+    public ArrayList<Component> getComponents() {
+        return components;
+    }
+
+    public void setComponents(ArrayList<Component> components) {
+        this.components = components;
     }
 }
