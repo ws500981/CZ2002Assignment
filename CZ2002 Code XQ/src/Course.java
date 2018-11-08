@@ -8,7 +8,7 @@ public class Course {
     private String name;
     private String courseID;
     private String profInCharge;
-    private SortedMap<Integer, StudentInCourse> studentsInCourse;
+    private SortedMap<Integer, Student> studentsInCourse;
     private ArrayList<Component> components;
     private Map<String, Tutorial> tutGroups;
     private Map<String, Lab> labGroups;
@@ -25,7 +25,7 @@ public class Course {
         this.labGroups = new TreeMap<>();
     }
 
-    public Course(String name, String courseID, String profInCharge, SortedMap<Integer, StudentInCourse> studentsInCourse, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
+    public Course(String name, String courseID, String profInCharge, SortedMap<Integer, Student> studentsInCourse, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
         this.name = name;
         this.courseID = courseID;
         this.profInCharge = profInCharge;
@@ -60,11 +60,11 @@ public class Course {
         this.profInCharge = profInCharge;
     }
 
-    public SortedMap<Integer, StudentInCourse> getStudentsInCourse() {
+    public SortedMap<Integer, Student> getStudentsInCourse() {
         return studentsInCourse;
     }
 
-    public void setStudentsInCourse(SortedMap<Integer, StudentInCourse> studentsInCourse) {
+    public void setStudentsInCourse(SortedMap<Integer, Student> studentsInCourse) {
         this.studentsInCourse = studentsInCourse;
     }
 

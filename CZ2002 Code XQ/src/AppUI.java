@@ -36,7 +36,7 @@ public class AppUI {
 					viewCourseMenu(courseManager);
 					break;
 				case 5:
-					registerStudent(registrationManager);
+					registerStudent(registrationManager, courseManager, studentManager);
 					break;
 				case 6:
 					break;
@@ -112,19 +112,19 @@ public class AppUI {
 			System.out.println("Student ID not found.");
 			return;
 		}
-		
+		int choice = 0;
 		do {
 			System.out.printf("Viewing StudentID %d: %s.\n"
 					+ "1. Register for course\n"
 					+ "2. Enter Marks\n"
 					+ "3. Print student list\n"
-					+ "4. Exit to main menu", sID, sManager.getAllStudents().get(sID).get(Name));
+					+ "4. Exit to main menu", sID, sManager.getAllStudents().get(sID).getName());
 			
-			int choice = sc.nextInt();
+			choice = sc.nextInt();
 			
 			switch (choice) {
 				case 1:
-					sManager.registerCourse(sID);
+					//sManager.registerCourse(sID);
 					break;
 				case 2:
 					sManager.enterMarks(sID);
@@ -144,12 +144,14 @@ public class AppUI {
 
 	private static void viewCourseMenu(CourseManager cManager) {	
 		System.out.print("Please enter CourseID: ");
-		int cID = sc.nextLine();
+		String cID = sc.nextLine();
 		if (!cManager.getCourseList().containsKey(cID)) {
 			System.out.println("Course ID not found.");
 			return;
 		}
-		
+
+		int choice = 0;
+
 		do {
 			System.out.printf("Viewing CourseID %d: %s.\n"
 					+ "1. Check available slots\n"
@@ -157,7 +159,7 @@ public class AppUI {
 					+ "3. Print student list\n"
 					+ "4. Exit to main menu", cID, cManager.getCourseList().get(cID).getName());
 			
-			int choice = sc.nextInt();
+			choice = sc.nextInt();
 			
 			switch (choice) {
 				case 1:
@@ -167,7 +169,7 @@ public class AppUI {
 					cManager.printCourseStatistics(cID);
 					break;
 				case 3:
-					printStudentList(cID);
+					cManager.printStudentList(cID);
 					break;
 				case 4:
 					break;
@@ -194,12 +196,12 @@ public class AppUI {
 			System.out.println("Course ID not found. Cancelling operation.");
 			return;
 		}
-		else if (cManager.getCourseList().get(cID).getStudentsList().containsKey(sID)) {
+		else if (cManager.getCourseList().get(cID).getStudentsInCourse().containsKey(sID)) {
 			System.out.println("Student already registered for course. Cancelling operation.");
 			return;
 		}
 		
-		rManager.registerStudent(cManager.getCourselist().get(cID), sManager.getAllStudents().containsKey(sID));
+		rManager.registerStudent(cManager.getCourseList().get(cID), sManager.getAllStudents().get(sID));
 		
 		return;
 	}
