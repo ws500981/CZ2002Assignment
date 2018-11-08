@@ -8,8 +8,7 @@ public class AppUI {
 		
 		CourseManager courseManager = new CourseManager();
 		StudentManager studentManager = new StudentManager();
-		//create studentManager
-		//create registerStudentManager
+		RegistrationManager registrationManager = new RegistrationManager();
 		
 		int choice;
 		
@@ -17,9 +16,9 @@ public class AppUI {
 			System.out.println("Welcome to the STUDENT COURSE REGISTRATION AND MARK ENTRY Application. Please select what you want to do.\n"
 					+ "1. Add new student\n"
 					+ "2. Add new course\n"
-					+ "3. Edit student info\n"
-					+ "4. Edit course info\n"
-					+ "5. Check for course slot\n"
+					+ "3. View student info\n"
+					+ "4. View course info\n"
+					+ "5. Register student for course\n"
 					+ "6. Exit application");
 			choice = sc.nextInt();
 			
@@ -37,6 +36,9 @@ public class AppUI {
 					viewCourseMenu(courseManager);
 					break;
 				case 5:
+					registerStudent(registrationManager);
+					break;
+				case 6:
 					break;
 				default:
 					System.out.println("Please enter a valid choice");
@@ -44,7 +46,7 @@ public class AppUI {
 			}
 			
 			
-		} while (choice != 5);
+		} while (choice != 6);
 		
 	}
 
@@ -60,27 +62,51 @@ public class AppUI {
 	}
 
 	private static void addCourseMenu(CourseManager cManager) {
-		// TODO Add course code
 		
 		System.out.println("Enter name of course: ");
         String name = sc.nextLine();
+        System.out.println("Enter course ID in Charge: ");
+        String ID = sc.nextLine();
         System.out.println("Enter course Prof in Charge: ");
         String prof = sc.nextLine();
-        System.out.println("Enter Exam Weight. The remaining percentage will be assigned to CourseWork. Exam Weight: ");
-        int examWeight = sc.nextInt();
         System.out.println("Enter Vacancies: ");
         int vacancies = sc.nextInt();
-        System.out.println("Enter number of Tutorial Groups: ");
-        int numTutGroups = sc.nextInt();
-        System.out.println("Enter number of Lab Groups: ");
-        int numLabGroups = sc.nextInt();
         
-		cManager.addCourse(name, prof, examWeight, vacancies, numTutGroups, numLabGroups);
+        System.out.println("Enter number of Tutorial Groups: ");
+        String[] tutorialName = new String[sc.nextInt()];
+        for (int i = 1; i < tutorialName.length; i++) {
+        	System.out.printf("Enter name of tutorial %d: ", i);
+        	tutorialName[i] = sc.nextLine().toLowerCase();
+        }
+        
+        System.out.println("Enter number of Lab Groups: ");
+        String[] labName = new String[sc.nextInt()];
+        for (int i = 1; i < labName.length; i++) {
+        	System.out.printf("Enter name of lab %d: ", i);
+        	labName[i] = sc.nextLine().toLowerCase();
+        }
+        
+        System.out.println("Enter weightage of Exam: ");
+        int examWeight = sc.nextInt();
+        System.out.println("Enter number of Coursework subcomponents: ");
+        int numComponents = sc.nextInt() + 1;
+        String[] componentName = new String[numComponents];
+        int[] componentWeight = new int[numComponents];
+        componentName[0] = "exam";
+        componentWeight[0] = examWeight;
+        for (int i = 1; i < numComponents; i++) {
+        	System.out.printf("Enter name of component %d: ", i);
+        	componentName[i] = sc.nextLine().toLowerCase();
+            System.out.printf("\nEnter weightage of %s: ", componentName[i]);
+            componentWeight[i] = sc.nextInt();
+        }
+        
+		cManager.addCourse(name, ID, prof, vacancies, tutorialName, labName, componentName, componentWeight);
 		return;
 	}
 
 	private static void viewStudentMenu(StudentManager sManager) {
-
+		System.out.print("Please enter StudentID: ");
 		int sID = sc.nextInt();
 		if (!sManager.getAllStudents().containsKey(sID)) {
 			System.out.println("Student ID not found.");
@@ -117,7 +143,7 @@ public class AppUI {
 	}
 
 	private static void viewCourseMenu(CourseManager cManager) {	
-		
+		System.out.print("Please enter CourseID: ");
 		int cID = sc.nextLine();
 		if (!cManager.getCourseList().containsKey(cID)) {
 			System.out.println("Course ID not found.");
@@ -152,6 +178,30 @@ public class AppUI {
 			
 		} while (choice != 4);
 		
+	}
+	
+	private static void registerStudent(RegistrationManager rManager, CourseManager cManager, StudentManager sManager) {
+		System.out.print("Please enter StudentID: ");
+		int sID = sc.nextInt();
+		if (!sManager.getAllStudents().containsKey(sID)) {
+			System.out.println("Student ID not found. Cancelling operation.");
+			return;
+		}
+		
+		System.out.print("Please enter CourseID to register student to: ");
+		String cID = sc.nextLine();
+		if (!cManager.getCourseList().containsKey(cID)) {
+			System.out.println("Course ID not found. Cancelling operation.");
+			return;
+		}
+		else if (cManager.getCourseList().get(cID).getStudentsList().containsKey(sID)) {
+			System.out.println("Student already registered for course. Cancelling operation.");
+			return;
+		}
+		
+		rManager.registerStudent(cManager.getCourselist().get(cID), sManager.getAllStudents().containsKey(sID));
+		
+		return;
 	}
 
 }
