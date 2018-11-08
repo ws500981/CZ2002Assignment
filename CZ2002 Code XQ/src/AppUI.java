@@ -132,6 +132,7 @@ public class AppUI {
 					System.out.println("Please enter your marks: ");
 					int marks = sc.nextInt();
 					sManager.enterMarks(sID, cID, marks);
+					System.out.println("Your marks for course %s ");
 					break;
 				case 3:
 					sManager.printStudentTranscript(sID);

@@ -4,7 +4,7 @@ public class Student {
     private String Name;
     private int studentID;
 
-    HashMap<String, Course> registeredCourses = new HashMap<>();
+    HashMap<String, RegisteredCourse> registeredCourses = new HashMap<>();
 
 
     public String getName() {
@@ -23,7 +23,7 @@ public class Student {
         this.studentID = studentID;
     }
 
-    public HashMap<String, Course> getregisteredCourses() {
+    public HashMap<String, RegisteredCourse> getregisteredCourses() {
 
         return this.registeredCourses;
     }
