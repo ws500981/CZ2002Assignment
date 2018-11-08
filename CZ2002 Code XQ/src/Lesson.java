@@ -1,7 +1,16 @@
-public class Lesson {
+import java.util.SortedMap;
+
+public abstract class Lesson {
+
     private String groupName;
     private int Vacancy;
-    private StudentInCourse[] studentList;
+    private SortedMap<Integer, Student> studentList;
+
+    public Lesson(String groupName, int vacancy, SortedMap<Integer, Student> studentList) {
+        this.groupName = groupName;
+        this.Vacancy = vacancy;
+        this.studentList = studentList;
+    }
 
     public String getGroupName() {
         return groupName;
@@ -19,11 +28,11 @@ public class Lesson {
         Vacancy = vacancy;
     }
 
-    public StudentInCourse[] getStudentList() {
+    public SortedMap<Integer, Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(StudentInCourse[] studentList) {
+    public void setStudentList(SortedMap<Integer, Student> studentList) {
         this.studentList = studentList;
     }
 }

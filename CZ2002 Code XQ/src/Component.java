@@ -1,33 +1,25 @@
 public class Component {
-    private String Name;
-    private int Weight;
-    private int Mark;
+    private String name;
+    private int weight;
 
-
+    public Component(String name, int weight) {
+        this.name = name;
+        this.weight = weight;
+    }
 
     public String getName() {
-        return Name;
+        return this.name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getWeight() {
-        return Weight;
+        return this.weight;
     }
 
     public void setWeight(int weight) {
-        Weight = weight;
+        this.weight = weight;
     }
-
-    public int getMark() {
-        return Mark;
-    }
-
-    public void setMark(int mark) {
-        Mark = mark;
-    }
-
-
 }

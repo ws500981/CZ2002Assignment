@@ -1,32 +1,54 @@
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 public class Course {
 
-    private String Name;
-    private int courseID;
+    private String name;
+    private String courseID;
     private String profInCharge;
-    private StudentInCourse Students;
-    private Coursework courseWork = new Coursework();
-    private Exam Exam = new Exam();
-    private Tutorial[] tutGroups;
-    private Lab[] labGroups;
-    private int Vacancy = 0;
+    private SortedMap<Integer, StudentInCourse> studentsInCourse;
+    private ArrayList<Component> components;
+    private Map<String, Tutorial> tutGroups;
+    private Map<String, Lab> labGroups;
+    private int vacancy;
 
-    public Course(int ID) {
-        courseID = ID;
+    public Course(String name, String courseID, String profInCharge, int vacancy) {
+        this.name = name;
+        this.courseID = courseID;
+        this.profInCharge = profInCharge;
+        this.vacancy = vacancy;
+        this.components = new ArrayList<>();
+        this.studentsInCourse = new TreeMap<>();
+        this.tutGroups= new TreeMap<>();
+        this.labGroups = new TreeMap<>();
+    }
+
+    public Course(String name, String courseID, String profInCharge, SortedMap<Integer, StudentInCourse> studentsInCourse, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
+        this.name = name;
+        this.courseID = courseID;
+        this.profInCharge = profInCharge;
+        this.studentsInCourse = studentsInCourse;
+        this.components = components;
+        this.tutGroups = tutGroups;
+        this.labGroups = labGroups;
+        this.vacancy = vacancy;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
-    public int getCourseID() {
+    public String getCourseID() {
         return courseID;
     }
 
-    public void setCourseID(int courseID) {
+    public void setCourseID(String courseID) {
         this.courseID = courseID;
     }
 
@@ -38,83 +60,45 @@ public class Course {
         this.profInCharge = profInCharge;
     }
 
-    public StudentInCourse getStudents() {
-        return Students;
+    public SortedMap<Integer, StudentInCourse> getStudentsInCourse() {
+        return studentsInCourse;
     }
 
-    public void setStudents(StudentInCourse students) {
-        Students = students;
+    public void setStudentsInCourse(SortedMap<Integer, StudentInCourse> studentsInCourse) {
+        this.studentsInCourse = studentsInCourse;
     }
 
-    public Exam getExam() {
-        return Exam;
+    public ArrayList<Component> getComponents() {
+        return components;
     }
 
-    public void setExam(Exam exam) {
-        Exam = exam;
+    public void setComponents(ArrayList<Component> components) {
+        this.components = components;
     }
 
-    public Tutorial[] getTutGroups() {
+    public Map<String, Tutorial> getTutGroups() {
         return tutGroups;
     }
 
-    public void setTutGroups(Tutorial[] tutGroups) {
+    public void setTutGroups(Map<String, Tutorial> tutGroups) {
         this.tutGroups = tutGroups;
     }
 
-    public void createTutGroups (int groups){
-        int vacanciesLeft = Vacancy;
-
-        tutGroups = new Tutorial[groups];
-
-        for (Tutorial tut : tutGroups){
-            tut.setVacancy(vacanciesLeft/groups);
-        }
-
-        //ensure all tut/lab have same number of slots as lect
-        if (vacanciesLeft % groups != 0 ){
-            for (int i = 0; i < (vacanciesLeft%groups); i++){
-                tutGroups[i].setVacancy((tutGroups[i].getVacancy()+1));
-            }
-        }
-
-    }
-
-    public Lab[] getLabGroups() {
+    public Map<String, Lab> getLabGroups() {
         return labGroups;
     }
 
-    public void setLabGroups(Lab[] labGroups) {
+    public void setLabGroups(Map<String, Lab> labGroups) {
         this.labGroups = labGroups;
     }
 
-    public void createLabGroups (int groups){
-        labGroups = new Lab[groups];
-        int vacanciesLeft = Vacancy;
-
-        for (Lab lab : labGroups){
-            lab.setVacancy(vacanciesLeft/groups);
-        }
-
-        //ensure all tut/lab have same number of slots as lect
-        if (vacanciesLeft % groups != 0 ){
-            for (int i = 0; i < (vacanciesLeft%groups); i++){
-                labGroups[i].setVacancy((labGroups[i].getVacancy()+1));
-            }
-        }
-    }
-
     public int getVacancy() {
-        return Vacancy;
+        return vacancy;
     }
 
     public void setVacancy(int vacancy) {
-        Vacancy = vacancy;
-    }
-
-    public void setWeight(int weight){
-        Exam.setWeight(weight);
-        courseWork.setWeight(100-weight);
-
+        this.vacancy = vacancy;
     }
 }
+
+
