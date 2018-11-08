@@ -9,9 +9,11 @@ public class Student {
         return registeredCourses;
     }
 
+
     public void setRegisteredCourses(HashMap<String, RegisteredCourse> registeredCourses) {
         this.registeredCourses = registeredCourses;
     }
+
 
     public String getName() {
         return Name;
@@ -27,5 +29,10 @@ public class Student {
 
     public void setStudentID(int studentID) {
         this.studentID = studentID;
+    }
+
+    public HashMap<String, RegisteredCourse> getregisteredCourses() {
+
+        return this.registeredCourses;
     }
 }
