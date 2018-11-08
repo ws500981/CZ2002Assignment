@@ -1,6 +1,10 @@
+import java.util.HashMap;
+
 public class Student {
     private String Name;
     private int studentID;
+
+    HashMap<String, Course> registeredCourses = new HashMap<>();
 
 
     public String getName() {
@@ -17,5 +21,10 @@ public class Student {
 
     public void setStudentID(int studentID) {
         this.studentID = studentID;
+    }
+
+    public HashMap<String, Course> getregisteredCourses() {
+
+        return this.registeredCourses;
     }
 }

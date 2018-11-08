@@ -1,8 +1,8 @@
-public class RegisteredCourse extends Student {
+public class RegisteredCourse {
     private Component[] courseworkMark;
     private int examMark;
     private int totalMark;
-    private int courseId;
+    private String courseId;
     private int tutGroup;
     private int labGroup;
 

@@ -23,7 +23,9 @@ public class StudentManager {
 
     }
 
-    public void enterMarks (int studentID){
+    public void enterMarks (int studentID, String courseID, int marks){
+
+
 
     }
 

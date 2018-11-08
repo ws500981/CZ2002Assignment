@@ -116,8 +116,8 @@ public class AppUI {
 		do {
 			System.out.printf("Viewing StudentID %d: %s.\n"
 					+ "1. Register for course\n"
-					+ "2. Enter Marks\n"
-					+ "3. Print student list\n"
+					+ "2. Enter exam marks\n"
+					+ "3. Print course list\n"
 					+ "4. Exit to main menu", sID, sManager.getAllStudents().get(sID).getName());
 			
 			choice = sc.nextInt();
@@ -127,7 +127,11 @@ public class AppUI {
 					//sManager.registerCourse(sID);
 					break;
 				case 2:
-					sManager.enterMarks(sID);
+					System.out.println("Please enter the exam's course code: ");
+					String cID = sc.next();
+					System.out.println("Please enter your marks: ");
+					int marks = sc.nextInt();
+					sManager.enterMarks(sID, cID, marks);
 					break;
 				case 3:
 					sManager.printStudentTranscript(sID);
