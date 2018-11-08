@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa308f62-fb8f-4d57-9d86-3bb1ed868e5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentInCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentInCourse.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,9 +50,11 @@
     <session id="-2132962879">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -67,6 +67,20 @@
           <entry key="JAVA" value="130" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -74,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+            <state relative-caret-position="272">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
+            <state relative-caret-position="1088">
               <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
               <folding>
                 <element signature="e#354#355#0" expanded="true" />
@@ -98,21 +112,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StudentInCourse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-              <folding>
-                <element signature="e#170#171#0" expanded="true" />
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#246#247#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../CZ2002 Code XQ/src/AppUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -229,7 +242,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,7 +259,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -255,7 +268,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541501727778" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CZ2002 Code XQ/src/AppUI.java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -289,11 +302,13 @@
       <workItem from="1541386791620" duration="1735000" />
       <workItem from="1541497414370" duration="3769000" />
       <workItem from="1541612590127" duration="182000" />
+      <workItem from="1541657921191" duration="250000" />
+      <workItem from="1541679623332" duration="1202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5686000" />
+    <option name="totallyTimeSpent" value="7138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -306,8 +321,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2574899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26639676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,15 +397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -407,12 +414,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Course.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        <state relative-caret-position="1088">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -476,33 +486,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Course.java">
+    <entry file="file://$PROJECT_DIR$/src/StudentInCourse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+        <state relative-caret-position="136">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/AppUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StudentInCourse.java">
+    <entry file="file://$PROJECT_DIR$/../../CZ2002 Code XQ/src/AppUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
         </state>
       </provider>
     </entry>
