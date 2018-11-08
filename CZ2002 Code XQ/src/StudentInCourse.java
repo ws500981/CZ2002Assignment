@@ -2,6 +2,9 @@ public class StudentInCourse extends Student {
     private Component[] courseworkMark;
     private int examMark;
     private int totalMark;
+    private int courseId;
+    private int tutGroup;
+    private int labGroup;
 
     public int getExamMark() {
         return examMark;
