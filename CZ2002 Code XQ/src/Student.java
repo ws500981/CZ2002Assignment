@@ -1,7 +1,17 @@
+import java.util.HashMap;
+
 public class Student {
     private String Name;
     private int studentID;
+    private HashMap <String, RegisteredCourse> registeredCourses;
 
+    public HashMap<String, RegisteredCourse> getRegisteredCourses() {
+        return registeredCourses;
+    }
+
+    public void setRegisteredCourses(HashMap<String, RegisteredCourse> registeredCourses) {
+        this.registeredCourses = registeredCourses;
+    }
 
     public String getName() {
         return Name;

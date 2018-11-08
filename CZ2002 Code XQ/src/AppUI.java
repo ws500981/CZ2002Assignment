@@ -196,7 +196,7 @@ public class AppUI {
 			System.out.println("Course ID not found. Cancelling operation.");
 			return;
 		}
-		else if (cManager.getCourseList().get(cID).getStudentsInCourse().containsKey(sID)) {
+		else if (cManager.getCourseList().get(cID).getStudentsList().containsKey(sID)) {
 			System.out.println("Student already registered for course. Cancelling operation.");
 			return;
 		}
