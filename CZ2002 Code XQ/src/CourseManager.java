@@ -30,23 +30,37 @@ public class CourseManager{
 
     public void checkAvailSlots(String courseID) {
         Course course = findCourse(courseID);
-        System.out.println("There are " + course.getVacancy() + " vacancies left");
+        if(course!=null) System.out.println("There are " + course.getVacancy() + " vacancies left");
     }
 
     public void printCourseStatistics(String courseID) {
-
+        Course course = findCourse(courseID);
+        if(course!=null) {
+            System.out.println("Course Statistics for " + courseID + " " + course.getName() + ":");
+            int sum = 0;
+            SortedMap<Integer, Student> studentList = course.getStudentsList();
+            HashMap<String, Course> registeredCourse = new HashMap<>();
+            for(int i : studentList.keySet()) {
+                Student student = studentList.get(i);
+                registeredCourse = student.getRegisteredCourse();
+                int marks = registeredCourse.calculateResults();
+                System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                sum += marks;
+            }
+            int average = sum/studentList.size();
+            System.out.println("Course Average: " + average);
+        }
     }
 
-    public void getResults(SortedMap<Integer,StudentInCourse> students) {
-
-    }
 
     public void printStudentList(String courseID) {
         Course course = findCourse(courseID);
-        SortedMap<Integer, Student> students = course.getRegisteredCourse();
-        System.out.println("There are " + students.size() + " students in " + course.getName());
-        for(int id : students.keySet()) {
-            System.out.println(id + " " + students.get(id));
+        if (course != null) {
+            SortedMap<Integer, Student> students = course.getStudentsList();
+            System.out.println("There are " + students.size() + " students in " + course.getName());
+            for (int id : students.keySet()) {
+                System.out.println(id + " " + students.get(id));
+            }
         }
     }
 
