@@ -2,7 +2,6 @@ public class Student {
     private String Name;
     private int studentID;
 
-
     public String getName() {
         return Name;
     }
@@ -18,4 +17,5 @@ public class Student {
     public void setStudentID(int studentID) {
         this.studentID = studentID;
     }
+
 }
