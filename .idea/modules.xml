@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CZ2002_code_CQ.iml" filepath="$PROJECT_DIR$/CZ2002_code_CQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CZ2002Assignment.iml" filepath="$PROJECT_DIR$/.idea/CZ2002Assignment.iml" />
     </modules>
   </component>
 </project>
