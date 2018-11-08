@@ -82,7 +82,7 @@ public class AppUI {
 	private static void viewStudentMenu(StudentManager sManager) {
 
 		int sID = sc.nextInt();
-		if (!sManager.getCourseList().containsKey(sID)) {
+		if (!sManager.getAllStudents().containsKey(sID)) {
 			System.out.println("Student ID not found.");
 			return;
 		}
@@ -118,7 +118,7 @@ public class AppUI {
 
 	private static void viewCourseMenu(CourseManager cManager) {	
 		
-		int cID = sc.nextInt();
+		int cID = sc.nextLine();
 		if (!cManager.getCourseList().containsKey(cID)) {
 			System.out.println("Course ID not found.");
 			return;
