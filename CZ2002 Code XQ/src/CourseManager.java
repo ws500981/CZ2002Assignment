@@ -39,10 +39,10 @@ public class CourseManager{
             System.out.println("Course Statistics for " + courseID + " " + course.getName() + ":");
             int sum = 0;
             SortedMap<Integer, Student> studentList = course.getStudentsList();
-            HashMap<String, Course> registeredCourse = new HashMap<>();
+            HashMap<String, RegisteredCourse> registeredCourses = new HashMap<>();
             for(int i : studentList.keySet()) {
                 Student student = studentList.get(i);
-                registeredCourse = student.getRegisteredCourse();
+                RegisteredCourse registeredCourse = student.getRegisteredCourses().get(courseID);
                 int marks = registeredCourse.calculateResults();
                 System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
                 sum += marks;

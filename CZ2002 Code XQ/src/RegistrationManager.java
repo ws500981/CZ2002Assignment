@@ -3,7 +3,7 @@ public class RegistrationManager {
     public boolean registerStudent(Course course, Student student) {
 
         if(!checkStudentInCourse(student.getStudentID(), course)) {
-            course.getStudentsInCourse().put(student.getStudentID(), student);
+            course.getStudentsList().put(student.getStudentID(), student);
             return true;
 
         } else {
@@ -23,8 +23,8 @@ public class RegistrationManager {
     }
 
     private Student findStudent(int ID, Course course) {
-        for(int i : course.getStudentsInCourse().keySet()){
-            if(i==ID) return course.getStudentsInCourse().get(i);
+        for(int i : course.getStudentsList().keySet()){
+            if(i==ID) return course.getStudentsList().get(i);
         }
         return null;
     }
