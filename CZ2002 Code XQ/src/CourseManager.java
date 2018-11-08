@@ -42,7 +42,7 @@ public class CourseManager{
             HashMap<String, RegisteredCourse> registeredCourses = new HashMap<>();
             for(int i : studentList.keySet()) {
                 Student student = studentList.get(i);
-                RegisteredCourse registeredCourse = student.getRegisteredCourses().get(courseID);
+                RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                 int marks = registeredCourse.calculateResults();
                 System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
                 sum += marks;
