@@ -11,9 +11,16 @@ public class StudentManager {
         student.setStudentID(studentID);
         allStudents.put(student.getStudentID(), student.getName());
 
-        for (Integer i : allStudents.keySet()) {
+        for (Integer key : allStudents.keySet()) {
 
-            System.out.println(allStudents.get(i) + ", " + i);
+            System.out.println(allStudents.get(key) + ", " + key);
         }
     }
+
+    public HashMap<Integer, String> getAllStudents(){
+
+        return this.allStudents;
+
+    }
+
 }

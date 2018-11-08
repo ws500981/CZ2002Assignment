@@ -31,7 +31,7 @@ public class StudentInCourse extends Student {
     }
 
     public int calculateTotalMark(){
-        //plcaeholder
+        //placeholder
         return 0;
     }
 }

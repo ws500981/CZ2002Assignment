@@ -92,7 +92,7 @@ public class AppUI {
 					+ "1. Register for course\n"
 					+ "2. Enter Marks\n"
 					+ "3. Print student list\n"
-					+ "4. Exit to main menu", sID, sManager.getAllStudents().get(sID).getName());
+					+ "4. Exit to main menu", sID, sManager.getAllStudents().get(sID).get(Name));
 			
 			int choice = sc.nextInt();
 			
