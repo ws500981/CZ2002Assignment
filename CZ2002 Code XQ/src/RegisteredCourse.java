@@ -1,4 +1,4 @@
-public class StudentInCourse extends Student {
+public class RegisteredCourse extends Student {
     private Component[] courseworkMark;
     private int examMark;
     private int totalMark;

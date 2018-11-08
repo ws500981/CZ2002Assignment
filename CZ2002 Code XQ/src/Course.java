@@ -8,7 +8,7 @@ public class Course {
     private String name;
     private String courseID;
     private String profInCharge;
-    private SortedMap<Integer, Student> studentsInCourse;
+    private SortedMap<Integer, Student> studentsList;
     private ArrayList<Component> components;
     private Map<String, Tutorial> tutGroups;
     private Map<String, Lab> labGroups;
@@ -20,16 +20,16 @@ public class Course {
         this.profInCharge = profInCharge;
         this.vacancy = vacancy;
         this.components = new ArrayList<>();
-        this.studentsInCourse = new TreeMap<>();
+        this.studentsList = new TreeMap<>();
         this.tutGroups= new TreeMap<>();
         this.labGroups = new TreeMap<>();
     }
 
-    public Course(String name, String courseID, String profInCharge, SortedMap<Integer, Student> studentsInCourse, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
+    public Course(String name, String courseID, String profInCharge, SortedMap<Integer, Student> studentsList, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
         this.name = name;
         this.courseID = courseID;
         this.profInCharge = profInCharge;
-        this.studentsInCourse = studentsInCourse;
+        this.studentsList = studentsList;
         this.components = components;
         this.tutGroups = tutGroups;
         this.labGroups = labGroups;
@@ -60,12 +60,12 @@ public class Course {
         this.profInCharge = profInCharge;
     }
 
-    public SortedMap<Integer, Student> getStudentsInCourse() {
-        return studentsInCourse;
+    public SortedMap<Integer, Student> getStudentsList() {
+        return studentsList;
     }
 
-    public void setStudentsInCourse(SortedMap<Integer, Student> studentsInCourse) {
-        this.studentsInCourse = studentsInCourse;
+    public void setStudentsList(SortedMap<Integer, Student> studentsList) {
+        this.studentsList = studentsList;
     }
 
     public ArrayList<Component> getComponents() {

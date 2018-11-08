@@ -15,7 +15,7 @@ public class CourseManager{
                           int vacancies, String[] tutNames, String[] labNames,
                           String[] componentNames, int[] componentWeights) {
         ArrayList<Component> components = new ArrayList<>();
-        for(int i=0; i<componentName.length; i++) components.add(new Component(componentNames[i],componentWeights[i]));
+        for(int i=0; i<componentName.length; i++) components.add(new Component(componentNames[i],componentWeights[i],0));
         Map<String, Tutorial> tutorials = new TreeMap<>();
         for(int i=0; i<tutNames.length; i++) {
             tutorials.put(tutNames[i], new Tutorial(tutNames[i],vacancies/tutNames.length, null));
@@ -43,7 +43,7 @@ public class CourseManager{
 
     public void printStudentList(String courseID) {
         Course course = findCourse(courseID);
-        SortedMap<Integer, Student> students = course.getStudentsInCourse();
+        SortedMap<Integer, Student> students = course.getRegisteredCourse();
         System.out.println("There are " + students.size() + " students in " + course.getName());
         for(int id : students.keySet()) {
             System.out.println(id + " " + students.get(id));
@@ -56,6 +56,7 @@ public class CourseManager{
         }
         return null;
     }
+
     public SortedMap<String, Course> getCourseList() {
         return courseList;
     }
