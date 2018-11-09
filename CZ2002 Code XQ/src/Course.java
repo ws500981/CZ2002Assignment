@@ -3,37 +3,43 @@ import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class Course {
+public class Course implements java.io.Serializable{
 
+    private static final long serialVersionUID = 1L;
     private String name;
     private String courseID;
-    private String profInCharge;
+    private Professor profInCharge;
     private SortedMap<Integer, Student> studentsList;
     private ArrayList<Component> components;
     private Map<String, Tutorial> tutGroups;
     private Map<String, Lab> labGroups;
     private int vacancy;
+    private int originalVacancy;
 
-    public Course(String name, String courseID, String profInCharge, int vacancy) {
+
+
+    public Course(String name, String courseID, Professor profInCharge, int vacancy) {
         this.name = name;
         this.courseID = courseID;
         this.profInCharge = profInCharge;
         this.vacancy = vacancy;
+        this.originalVacancy = vacancy;
         this.components = new ArrayList<>();
         this.studentsList = new TreeMap<>();
         this.tutGroups= new TreeMap<>();
         this.labGroups = new TreeMap<>();
     }
 
-    public Course(String name, String courseID, String profInCharge, SortedMap<Integer, Student> studentsList, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
+    public Course(String name, String courseID, Professor profInCharge, ArrayList<Component> components, Map<String, Tutorial> tutGroups, Map<String, Lab> labGroups, int vacancy) {
         this.name = name;
         this.courseID = courseID;
         this.profInCharge = profInCharge;
-        this.studentsList = studentsList;
+        this.studentsList = new TreeMap<>();
         this.components = components;
         this.tutGroups = tutGroups;
         this.labGroups = labGroups;
         this.vacancy = vacancy;
+        this.originalVacancy = vacancy;
     }
 
     public String getName() {
@@ -52,11 +58,11 @@ public class Course {
         this.courseID = courseID;
     }
 
-    public String getProfInCharge() {
+    public Professor getProfInCharge() {
         return profInCharge;
     }
 
-    public void setProfInCharge(String profInCharge) {
+    public void setProfInCharge(Professor profInCharge) {
         this.profInCharge = profInCharge;
     }
 
@@ -98,6 +104,14 @@ public class Course {
 
     public void setVacancy(int vacancy) {
         this.vacancy = vacancy;
+    }
+
+    public int getOriginalVacancy() {
+        return originalVacancy;
+    }
+
+    public void setOriginalVacancy(int originalVacancy) {
+        this.originalVacancy = originalVacancy;
     }
 }
 

@@ -1,10 +1,18 @@
 import java.util.HashMap;
 
-public class Student {
+public class Student implements java.io.Serializable{
+
+    private static final long serialVersionUID = 1L;
     private String Name;
     private int studentID;
+    //course id against registered course
     private HashMap <String, RegisteredCourse> registeredCourses;
 
+    public Student(String name, int studentID) {
+        Name = name;
+        this.studentID = studentID;
+        this.registeredCourses = new HashMap<>();
+    }
 
     public void setRegisteredCourses(HashMap<String, RegisteredCourse> registeredCourses) {
         this.registeredCourses = registeredCourses;
