@@ -48,7 +48,7 @@ public class StudentManager {
         allStudents.get(studentID).getregisteredCourses().get(courseID).getComponents().get(0).setMarks(marks);
 
     }
-
+/*
     public void enterMarksCoursework (int studentID, String courseID, int marks){
 
         Student student = allStudents.get(studentID);
@@ -60,8 +60,7 @@ public class StudentManager {
 
         }
     }
-
-
+*/
     public void printStudentTranscript (int studentID){
 
         Student student = allStudents.get(studentID);
@@ -75,11 +74,12 @@ public class StudentManager {
         for (String key : courses.keySet()) {
             System.out.println("Subject \t  Results");
             System.out.printf("%7s \t %d \n", courses.get(key).getCourseId(), courses.get(key).calculateResults());
-            System.out.println("Breakdown:");
+            System.out.println("\nBreakdown:");
             System.out.println("Component \t Weight \t Marks");
             for (Component component : courses.get(key).getComponents()){
                 System.out.printf("%10s \t %6s \t %d \n", component.getName(),Math.round(component.getWeight()), component.getMarks());
             }
+            System.out.printf("%10s \t %6s \t %d \n", "total", 100, courses.get(key).calculateResults());
         }
 
     }

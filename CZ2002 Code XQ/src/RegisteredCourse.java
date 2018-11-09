@@ -24,6 +24,7 @@ public class RegisteredCourse implements java.io.Serializable{
         }
         return sum;
 
+
     }
 
     public String getCourseName() {

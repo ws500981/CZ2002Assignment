@@ -49,7 +49,8 @@ public class AppUI {
 					addCourseMenu(courseManager, professorManager);
 					break;
 				case 3:
-					viewStudentMenu(studentManager);
+					//courseManager.update("m001", studentManager);
+					viewStudentMenu(studentManager, courseManager);
 					break;
 				case 4:
 					viewCourseMenu(courseManager);
@@ -139,7 +140,7 @@ public class AppUI {
 
 	}
 
-	private static void viewStudentMenu(StudentManager sManager) {
+	private static void viewStudentMenu(StudentManager sManager, CourseManager cManager) {
 		System.out.print("Please enter StudentID: ");
 		int sID = sc.nextInt();
 		if (!sManager.getAllStudents().containsKey(sID)) {
@@ -165,6 +166,9 @@ public class AppUI {
 					System.out.println("Please enter the course code: ");
 					cID = sc.next();
 					RegisteredCourse registeredCourse = sManager.getAllStudents().get(sID).getregisteredCourses().get(cID);
+					Student student = cManager.getCourseList().get(cID).getStudentsList().get(sID);
+
+
 					if (!(sManager.getAllStudents().get(sID).getregisteredCourses().containsKey(cID))){
 						System.out.println("Student not registered to course!");
 						break;
@@ -185,6 +189,9 @@ public class AppUI {
 						System.out.printf("Please enter your marks for %s\n", component.getName());
 						marks = sc.nextInt();
 						component.setMarks(marks);
+
+						student.getregisteredCourses().get(cID).getComponents().get(i).setMarks(marks);
+
 					}
 
 					System.out.println("Coursework marks entered");
@@ -199,6 +206,7 @@ public class AppUI {
 					System.out.println("Please enter your marks: ");
 					marks = sc.nextInt();
 					sManager.enterMarksExam(sID, cID, marks);
+					cManager.enterMarksExam(sID, cID, marks);
 					System.out.println("Exam marks entered");
 					break;
 				case 3:

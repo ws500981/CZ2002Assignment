@@ -118,24 +118,92 @@ public class CourseManager{
         }
     }
 
+    public void enterMarksExam(int sID, String cID, int marks){
+        Course course = getCourseList().get(cID);
+        RegisteredCourse reg = course.getStudentsList().get(sID).getregisteredCourses().get(cID);
+        reg.getComponents().get(0).setMarks(marks);
+    }
+
+    public void update(String courseID, StudentManager sManager) {
+        Course course = findCourse(courseID);
+        if (course != null) {
+            System.out.println("Course Statistics for " + courseID + " " + course.getName() + ":");
+            int sum = 0;
+            int marks = 0;
+            SortedMap<Integer, Student> studentList = course.getStudentsList();
+            HashMap<String, RegisteredCourse> registeredCourses = new HashMap<>();
+            for (int i : studentList.keySet()) {
+                Student student = studentList.get(i);
+                RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
+                marks = registeredCourse.calculateResults();
+                ArrayList<Component> marks_update = sManager.getAllStudents().get(i).getregisteredCourses().get(courseID).getComponents();
+                registeredCourse.setComponents(marks_update);
+                System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                sum += marks;
+            }
+        }
+    }
+
     public void printCourseStatistics(String courseID) {
         Course course = findCourse(courseID);
         if(course!=null) {
             System.out.println("Course Statistics for " + courseID + " " + course.getName() + ":");
             int sum = 0;
+            int marks = 0;
             SortedMap<Integer, Student> studentList = course.getStudentsList();
             HashMap<String, RegisteredCourse> registeredCourses = new HashMap<>();
+
+            System.out.println("Course Overall Statistics: ");
+
             for(int i : studentList.keySet()) {
                 Student student = studentList.get(i);
                 RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
-                int marks = registeredCourse.calculateResults();
+                marks = registeredCourse.calculateResults();
                 System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
                 sum += marks;
             }
             int average = sum/studentList.size();
             System.out.println("Course Average: " + average);
+            System.out.println();
+            System.out.println("Course Exam Statistics");
+            System.out.println();
+            int sum_exam = 0;
+
+            for(int i : studentList.keySet()) {
+                Student student = studentList.get(i);
+                RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
+                marks = registeredCourse.getComponents().get(0).getMarks();
+                System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                sum_exam += marks;
+            }
+            int average_exam = sum_exam/studentList.size();
+            System.out.println("Course Average: " + average_exam);
+            System.out.println();
+            System.out.println("Course CourseWork Statistics");
+            System.out.println();
+
+
+
+            for (int i = 1; i < course.getComponents().size(); i++){
+                int sum_coursework = 0;
+                System.out.printf("Course %s Statistics", course.getComponents().get(i).getName());
+                System.out.println();
+                for(int j : studentList.keySet()) {
+                    Student student = studentList.get(j);
+                    RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
+                    marks = registeredCourse.getComponents().get(i).getMarks();
+                    System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                    sum_coursework += marks;
+                }
+                int average_course = sum_coursework/studentList.size();
+                System.out.println("Course Average: " + average_course);
+                System.out.println();
+            }
+
+
+
         }
-    }
+    }   //student.getregisteredCourses().get(key).calculateResults();
 
 
     public void printStudentList(String courseID) {
