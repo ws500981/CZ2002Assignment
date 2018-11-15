@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class AddCourseUI {
 
     private static Scanner sc = new Scanner(System.in);
+    private static ArrayList<String> messages;
 
     public static void addCourseMenu(CourseManager cManager, ProfessorManager pManager) {
 
@@ -25,15 +26,15 @@ public class AddCourseUI {
         }while(professor==null);
 
         System.out.println("Enter Vacancies: ");
-        ArrayList<String> messages = ScannerManager.createMessages("Enter Vacancies: ", "Student ID should not be 0 or negative!");
+        messages = ScannerManager.createMessages("Enter Vacancies: ", "Student ID should a positive number!");
         int vacancies = ScannerManager.testIntInput(messages, 0);
 
-        messages = ScannerManager.createMessages("Enter number of Tutorial Groups: ", "Number of tutorial groups should not be 0 or negative!");
+        messages = ScannerManager.createMessages("Enter number of Tutorial Groups: ", "Number of tutorial groups should a positive number!");
         int numberOfTutGroups = ScannerManager.testIntInput(messages, 0);
         String[] tutorialName = new String[numberOfTutGroups];
+
         for (int i = 0; i < tutorialName.length; i++) {
-            System.out.printf("Enter name of tutorial %d: ", i+1);
-            tutorialName[i] = sc.nextLine().toLowerCase();
+            tutorialName[i] = ScannerManager.stringInput("Enter name of tutorial " + (i+1) + " :").toLowerCase();
         }
 
         System.out.println("Enter number of Lab Groups: ");
@@ -44,24 +45,21 @@ public class AddCourseUI {
             labName[i] = sc.nextLine().toLowerCase();
         }
 
-        System.out.println("Enter weightage of Exam: ");
-        int examWeight = sc.nextInt();
+        messages = ScannerManager.createMessages("Enter weightage of Exam: ", "Weightage should not be 0 or negative!");
+        int examWeight = ScannerManager.testIntInput(messages, 0);
         System.out.printf("Exam has a weightage of %d%%. Coursework will be allocated the remaining %d%%.\n", examWeight, 100-examWeight);
 
-        System.out.println("Enter number of Coursework subcomponents: ");
-        int numComponents = sc.nextInt()+1;
-        sc.nextLine();
+        messages = ScannerManager.createMessages("Enter number of Coursework subcomponents: ", "Number of subcomponents should not be 0 or negative!");
+        int numComponents = ScannerManager.testIntInput(messages, 0) + 1;
         String[] componentName = new String[numComponents];
         float[] componentWeight = new float[numComponents];
         componentName[0] = "exam";
         componentWeight[0] = examWeight;
 
         for (int i = 1; i < numComponents; i++) {
-            System.out.printf("Enter name of component %d: ", i);
-            componentName[i] = sc.nextLine().toLowerCase();
-            System.out.printf("\nEnter weightage of %s: ", componentName[i]);
-            componentWeight[i] = sc.nextInt();
-            sc.nextLine();
+            componentName[i] = ScannerManager.stringInput("Enter name of component " + i + " :").toLowerCase();
+            messages = ScannerManager.createMessages("\nEnter weightage of %s: " + componentName[i] + " :", "Weightage should not be 0 or negative!");
+            componentWeight[i] = (float) ScannerManager.testIntInput(messages, 0);
         }
 
         cManager.addCourse(name, ID, professor, vacancies, tutorialName, labName, componentName, componentWeight);

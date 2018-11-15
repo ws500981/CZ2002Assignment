@@ -19,7 +19,6 @@ public class ScannerManager {
         return sc.nextLine();
     }
 
-
     public static int testIntInput(ArrayList<String> messages, int limit){
 
         boolean success;
