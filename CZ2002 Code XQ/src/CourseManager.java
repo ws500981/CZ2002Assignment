@@ -35,14 +35,14 @@ public class CourseManager implements EntityManagerInterface{
 
         ArrayList<Component> components = new ArrayList<>();
 
-        int courseWorkPercent = 0;
+        float courseWorkPercent = 0;
 
         if (componentNames.length > 1){
             for(int i = 1; i < componentWeights.length; i++){
                 courseWorkPercent += componentWeights[i];
             }
 
-            if (courseWorkPercent != 100){
+            if (courseWorkPercent != 100.0){
                 System.out.println("Total coursework Weight not 100%! Course not added!");
                 return;
             }

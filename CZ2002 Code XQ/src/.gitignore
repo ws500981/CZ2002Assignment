@@ -15,3 +15,5 @@
 /RegistrationManager.class
 /ManagerInterface.class
 /EntityManagerInterface.class
+/CustomException.class
+/ScannerManager.class
