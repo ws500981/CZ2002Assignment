@@ -41,6 +41,32 @@ public class ScannerManager {
         return myInt;
 
     }
+    
+    public static int testIntInput(ArrayList<String> messages, int lowerLimit){
+    	//customizable int input that contains upper and lower limit and custom message. required to createMessages first
+    	
+        boolean success;
+        int myInt = -1;
+        
+        do {
+            System.out.println(messages.get(0));
+            success = true;
+            try {
+                myInt = sc.nextInt();
+                if(myInt <= lowerLimit) throw new CustomException(messages.get(1));
+            } catch (InputMismatchException e) {
+                System.out.println("Please only enter an integer!");
+                success = false;
+            } catch (CustomException e) {
+                System.out.println(messages.get(1));
+                success = false;
+            }
+            sc.nextLine();
+        } while(!success);
+
+        return myInt;
+
+    }
 
     public static int testIntInput(ArrayList<String> messages, int lowerLimit, int upperLimit){
     	//customizable int input that contains upper and lower limit and custom message. required to createMessages first
@@ -58,7 +84,7 @@ public class ScannerManager {
                 System.out.println("Please only enter an integer!");
                 success = false;
             } catch (CustomException e) {
-                System.out.println("Please only enter positive integers!");
+                System.out.println(messages.get(1));
                 success = false;
             }
             sc.nextLine();

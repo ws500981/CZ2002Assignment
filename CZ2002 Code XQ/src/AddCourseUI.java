@@ -26,7 +26,7 @@ public class AddCourseUI {
 
         System.out.println("Enter Vacancies: ");
         ArrayList<String> messages = ScannerManager.createMessages("Enter Vacancies: ", "Student ID should not be 0 or negative!");
-        int vacancies = ScannerManager.testIntInput(messages, 0);
+        int vacancies = ScannerManager.testIntInput(messages, 0, 1000);
 
         messages = ScannerManager.createMessages("Enter number of Tutorial Groups: ", "Number of tutorial groups should not be 0 or negative!");
         int numberOfTutGroups = ScannerManager.testIntInput(messages, 0);
