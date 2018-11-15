@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StudentManager  implements EntityManagerInterface{
@@ -26,14 +25,22 @@ public class StudentManager  implements EntityManagerInterface{
 
     public void addStudent(String Name, int studentID) {
 
-        Student student = new Student(Name, studentID);
-        allStudents.put(student.getId(), student);
+        try{
+            if (allStudents.containsKey(studentID)){
+                throw new CustomException("StudentID exists! Please try again!");
+            }
+            Student student = new Student(Name, studentID);
+            allStudents.put(student.getId(), student);
 
-        System.out.println("Student List:");
-        for (Integer key : allStudents.keySet()) {
+            System.out.println("Student List:");
+            for (Integer key : allStudents.keySet()) {
 
-            System.out.println(key + ", " + allStudents.get(key).getName());
+                System.out.println(key + ", " + allStudents.get(key).getName());
+            }
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
         }
+
 
     }
 

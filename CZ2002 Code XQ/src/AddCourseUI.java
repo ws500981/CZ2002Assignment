@@ -8,6 +8,7 @@ public class AddCourseUI {
 
         String name = ScannerManager.stringInput("Enter name of course: ");
 
+
         String ID = ScannerManager.stringInput("Enter course ID: ");
 
         System.out.println("Professor List: ");

@@ -33,49 +33,57 @@ public class CourseManager implements EntityManagerInterface{
                           int vacancies, String[] tutNames, String[] labNames,
                           String[] componentNames, float[] componentWeights) {
 
-        ArrayList<Component> components = new ArrayList<>();
+        try{
+            if (courseList.containsKey(ID)){
+                throw new CustomException("Course ID exists! Please try again");
+            }
+            ArrayList<Component> components = new ArrayList<>();
 
-        float courseWorkPercent = 0;
+            float courseWorkPercent = 0;
 
-        if (componentNames.length > 1){
-            for(int i = 1; i < componentWeights.length; i++){
-                courseWorkPercent += componentWeights[i];
+            if (componentNames.length > 1){
+                for(int i = 1; i < componentWeights.length; i++){
+                    courseWorkPercent += componentWeights[i];
+                }
+
+                if (courseWorkPercent != 100.0){
+                    System.out.println("Total coursework Weight not 100%! Course not added!");
+                    return;
+                }
             }
 
-            if (courseWorkPercent != 100.0){
-                System.out.println("Total coursework Weight not 100%! Course not added!");
-                return;
+            components.add(new Component(componentNames[0], componentWeights[0], 0));
+            System.out.println("Component name 0: " + componentNames[0]);
+            System.out.println("Component Weight 0: " + componentWeights[0]);
+            System.out.println();
+
+            for(int i=1; i<componentNames.length; i++){
+                float decimal_weight = componentWeights[0]/100;
+                float weight = (1-decimal_weight)*componentWeights[i];
+
+                components.add(new Component(componentNames[i],weight,0));
             }
+
+            Map<String, Tutorial> tutorials = new TreeMap<>();
+
+            for(int i=0; i<tutNames.length; i++) {
+                tutorials.put(tutNames[i], new Tutorial(tutNames[i],vacancies/tutNames.length, new TreeMap<>()));
+            }
+
+            Map<String, Lab> labs = new TreeMap<>();
+
+            for(int i=0; i<labNames.length; i++) {
+                labs.put(labNames[i], new Lab(labNames[i], vacancies / labNames.length, new TreeMap<>()));
+            }
+            Course course = new Course(name, ID, prof, components, tutorials, labs, vacancies);
+
+            courseList.put(ID, course);
+            printAllCourses();
+        }catch (CustomException e){
+            System.out.println(e.getMessage());
         }
 
-        components.add(new Component(componentNames[0], componentWeights[0], 0));
-        System.out.println("Component name 0: " + componentNames[0]);
-        System.out.println("Component Weight 0: " + componentWeights[0]);
-        System.out.println();
 
-        for(int i=1; i<componentNames.length; i++){
-            float decimal_weight = componentWeights[0]/100;
-            float weight = (1-decimal_weight)*componentWeights[i];
-            System.out.println("component weight: " + weight);
-
-            components.add(new Component(componentNames[i],weight,0));
-        }
-
-        Map<String, Tutorial> tutorials = new TreeMap<>();
-
-        for(int i=0; i<tutNames.length; i++) {
-            tutorials.put(tutNames[i], new Tutorial(tutNames[i],vacancies/tutNames.length, new TreeMap<>()));
-        }
-
-        Map<String, Lab> labs = new TreeMap<>();
-
-        for(int i=0; i<labNames.length; i++) {
-            labs.put(labNames[i], new Lab(labNames[i], vacancies / labNames.length, new TreeMap<>()));
-        }
-        Course course = new Course(name, ID, prof, components, tutorials, labs, vacancies);
-
-        courseList.put(ID, course);
-        printAllCourses();
     }
 
     //iterator pattern
