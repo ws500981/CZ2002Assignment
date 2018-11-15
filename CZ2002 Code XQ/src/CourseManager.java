@@ -26,6 +26,9 @@ public class CourseManager{
     }
 
 
+    //Exception: course already exists
+
+
     public void addCourse(String name, String ID, Professor prof,
                           int vacancies, String[] tutNames, String[] labNames,
                           String[] componentNames, float[] componentWeights) {
@@ -75,6 +78,8 @@ public class CourseManager{
         printAllCourses();
     }
 
+    //iterator pattern
+
     private void printAllCourses(){
         System.out.println("Course Listing:");
         System.out.println("Course ID \t Course Title \t Professor in Charge");
@@ -84,6 +89,7 @@ public class CourseManager{
             System.out.printf("%s \t %s \t %s \n", course.getCourseID(), course.getName(), course.getProfInCharge().getName());
         }
     }
+
 
 
     public void checkAvailSlots(String courseID) {
@@ -143,6 +149,7 @@ public class CourseManager{
             }
         }
     }
+
 
     public void printCourseStatistics(String courseID) {
         Course course = findCourse(courseID);
@@ -206,6 +213,7 @@ public class CourseManager{
     }   //student.getregisteredCourses().get(key).calculateResults();
 
 
+
     public void printStudentList(String courseID) {
         Course course = findCourse(courseID);
         if (course != null) {
@@ -267,6 +275,9 @@ public class CourseManager{
         }
     }
 */
+
+    //Exception: null exception
+
     private Course findCourse(String courseID) {
         /*
         System.out.println("Course List:");
