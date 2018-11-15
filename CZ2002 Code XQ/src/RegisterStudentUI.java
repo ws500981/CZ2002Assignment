@@ -8,7 +8,7 @@ public class RegisterStudentUI {
     }
 
     public static void registerStudent(RegistrationManager rManager, CourseManager cManager, StudentManager sManager) {
-        System.out.print("Please enter StudentID: ");
+        System.out.print("Please enter Student ID: ");
         int sID = sc.nextInt();
         sc.nextLine();
         if (!sManager.getAllStudents().containsKey(sID)) {
@@ -16,7 +16,7 @@ public class RegisterStudentUI {
             return;
         }
 
-        System.out.print("Please enter CourseID to register student to: ");
+        System.out.print("Please enter Course ID to register student to: ");
         String cID = sc.nextLine();
         if (!cManager.getCourseList().containsKey(cID)) {
             System.out.println("Course ID not found. Cancelling operation.");

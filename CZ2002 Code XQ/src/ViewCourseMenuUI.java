@@ -2,29 +2,25 @@ import java.util.Scanner;
 
 public class ViewCourseMenuUI {
 
-    private static Scanner sc = new Scanner(System.in);
-
     public ViewCourseMenuUI() {
     }
 
     public static void viewCourseMenu(CourseManager cManager) {
-        System.out.print("Please enter CourseID: ");
-        String cID = (String) sc.nextLine();
+        String cID = ScannerManager.stringInput("Please enter CourseID: ");
         if (!cManager.getCourseList().containsKey(cID)) {
             System.out.println("Course ID not found.");
             return;
         }
 
         int choice = 0;
+        String message = "Viewing CourseID " + cID + ": " + cManager.getCourseList().get(cID).getName() + "\n"
+        		+ "1. Check available slots\n"
+                + "2. Print course statistics\n"
+                + "3. Print student list\n"
+                + "4. Exit to main menu\n";
 
         do {
-            System.out.printf("\nViewing CourseID %s: %s.\n"
-                    + "1. Check available slots\n"
-                    + "2. Print course statistics\n"
-                    + "3. Print student list\n"
-                    + "4. Exit to main menu\n", cID, cManager.getCourseList().get(cID).getName());
-
-            choice = sc.nextInt();
+        	choice = ScannerManager.testIntInput(message);
 
             switch (choice) {
                 case 1:
@@ -48,19 +44,19 @@ public class ViewCourseMenuUI {
 
     private static void printStudentList(CourseManager cManager, String cID) {
 
-        int choice = 0;
         String lessonID;
+        int choice = 0;
+        String message = "Printing student list for CourseID " + cID + ": " + cManager.getCourseList().get(cID).getName() + "\n"
+        		+ "1. Print student list for whole course\n"
+                + "2. Print student list for lecture\n"
+                + "3. Print student list for tutorial\n"
+                + "4. Print student list for lab\n"
+                + "5. Exit to main menu\n";
 
         do {
-            System.out.printf("\nPrinting student list for CourseID %s: %s.\n"
-                    + "1. Print student list for whole course\n"
-                    + "2. Print student list for lecture\n"
-                    + "3. Print student list for tutorial\n"
-                    + "4. Print student list for lab\n"
-                    + "5. Exit to main menu\n", cID, cManager.getCourseList().get(cID).getName());
 
-            choice = sc.nextInt();
-            sc.nextLine();
+            choice = ScannerManager.testIntInput(message);
+//            sc.nextLine();
 
             switch (choice) {
                 case 1:
@@ -75,8 +71,7 @@ public class ViewCourseMenuUI {
                     }
                     System.out.println();
 
-                    System.out.println("Enter Tutorial ID to print");
-                    lessonID = sc.nextLine();
+                    lessonID = ScannerManager.stringInput("Enter Tutorial ID to print");
 
                     cManager.printStudentListLesson(cID, lessonID, 0);
                     break;
@@ -88,8 +83,7 @@ public class ViewCourseMenuUI {
                     }
                     System.out.println();
 
-                    System.out.println("Enter Lab ID to print");
-                    lessonID = sc.nextLine();
+                    lessonID = ScannerManager.stringInput("Enter Lab ID to print");
 
                     cManager.printStudentListLesson(cID, lessonID, 1);
                     break;

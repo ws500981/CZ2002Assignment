@@ -35,7 +35,7 @@ public class RegistrationManager {
             student.getregisteredCourses().put(courseID, register);;
         }
         else{
-            System.out.println(student.getName() + " " + student.getStudentID() + " already exists in " + course.getName());
+            System.out.println(student.getName() + " " + student.getId() + " already exists in " + course.getName());
             registered = false;
         }
         return registered;
@@ -45,7 +45,7 @@ public class RegistrationManager {
     private Boolean addStudentintoLesson(Lesson lesson, Student student){
 
         if (lesson.getVacancy() > 0){
-            lesson.getStudentList().put(student.getStudentID(), student);
+            lesson.getStudentList().put(student.getId(), student);
             lesson.setVacancy(lesson.getVacancy()-1);
             return true;
         }

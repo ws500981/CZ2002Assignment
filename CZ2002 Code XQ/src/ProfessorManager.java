@@ -11,6 +11,11 @@ public class ProfessorManager implements EntityManagerInterface{
     public void addProf(int Id, String Name){
         Professor prof = new Professor(Id, Name);
         allProfessors.put(Id, prof);
+        System.out.println("Student List:");
+        for (Integer key : allProfessors.keySet()) {
+
+            System.out.println(key + ", " + allProfessors.get(key).getName());
+        }
     }
 
     public void readData() {
@@ -18,7 +23,7 @@ public class ProfessorManager implements EntityManagerInterface{
         this.allProfessors = (HashMap<Integer, Professor>) deserializeData();
         System.out.println("Professor List:");
         for (int key : allProfessors.keySet()) {
-            System.out.println(allProfessors.get(key).getName() + ", " + key);
+            System.out.println(key + ", " + allProfessors.get(key).getName());
         }
 
     }

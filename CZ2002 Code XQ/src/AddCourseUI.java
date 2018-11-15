@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class AddCourseUI {
 
@@ -13,12 +12,12 @@ public class AddCourseUI {
 
         System.out.println("Professor List: ");
         for (Integer key : pManager.getAllProfessors().keySet()) {
-            System.out.printf("ID: %s \t Name: %s \n", pManager.getAllProfessors().get(key).getProfId(), pManager.getAllProfessors().get(key).getName());
+            System.out.printf("ID: %s \t Name: %s \n", pManager.getAllProfessors().get(key).getId(), pManager.getAllProfessors().get(key).getName());
         }
         Professor professor = pManager.getAllProfessors().get(ScannerManager.testIntInput("Select from Professor list\nEnter ID of Prof in Charge: "));
-        do {
+        while(professor==null) {
             professor = pManager.getAllProfessors().get(ScannerManager.testIntInput("Unable to find professor! Please enter a valid ID: "));
-        }while(professor==null);
+        }
 
         ArrayList<String> messages = ScannerManager.createMessages("Enter Vacancies: ", "Vacanies should be between 1 and 1000");
         int vacancies = ScannerManager.testIntInput(messages, 1, 1000);

@@ -16,23 +16,23 @@ public class StudentManager  implements EntityManagerInterface{
         this.allStudents = (HashMap<Integer, Student>) deserializeData();
         System.out.println("Student List:");
         for (Integer key : allStudents.keySet()) {
-            System.out.println(allStudents.get(key).getName() + ", " + key);
+            System.out.println(key + ", " + allStudents.get(key).getName());
         }
         System.out.println();
     }
     public void writeData(){
-        serialiseData(this.allStudents);
+        serializeData(this.allStudents);
     }
 
     public void addStudent(String Name, int studentID) {
 
         Student student = new Student(Name, studentID);
-        allStudents.put(student.getStudentID(), student);
+        allStudents.put(student.getId(), student);
 
         System.out.println("Student List:");
         for (Integer key : allStudents.keySet()) {
 
-            System.out.println(allStudents.get(key).getName() + ", " + key);
+            System.out.println(key + ", " + allStudents.get(key).getName());
         }
 
     }
@@ -82,21 +82,6 @@ public class StudentManager  implements EntityManagerInterface{
             System.out.printf("%10s \t %6s \t %d \n", "total", 100, courses.get(key).calculateResults());
         }
 
-    }
-
-    private static void serialiseData(HashMap<Integer, Student> studentData){
-
-        try {
-            FileOutputStream fileOut =
-                    new FileOutputStream("data/students.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(studentData);
-            out.close();
-            fileOut.close();
-            System.out.println("Serialized data is saved in data/student.ser");
-        } catch (IOException i) {
-            i.printStackTrace();
-        }
     }
 
 	@Override

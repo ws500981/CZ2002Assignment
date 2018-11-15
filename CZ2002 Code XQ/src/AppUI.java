@@ -25,6 +25,7 @@ public class AppUI {
 
 		do {
 			System.out.println("\nWelcome to the STUDENT COURSE REGISTRATION AND MARK ENTRY Application. Please select what you want to do.\n"
+					+ "0. Initialize Data\n"
 					+ "1. Add new student\n"
 					+ "2. Add new course\n"
 					+ "3. View student info\n"
@@ -36,6 +37,29 @@ public class AppUI {
 			sc.nextLine();
 
 			switch (choice) {
+				case 0:
+
+					professorManager.addProf(101, "James Cameron");
+					professorManager.addProf(102, "Steven Spielberg");
+					professorManager.addProf(103, "Christopher Nolan");
+					professorManager.addProf(104, "Stan Lee");
+					studentManager.addStudent("Jet Li", 1001);
+					studentManager.addStudent("Jay Chou", 1002);
+					studentManager.addStudent("Ariana Grande", 1003);
+					studentManager.addStudent("Leonardo DiCaprio", 1004);
+					studentManager.addStudent("Jessie McCartney", 1005);
+					studentManager.addStudent("Brad Pitt", 1006);
+					studentManager.addStudent("Angelina Jolie", 1007);
+					studentManager.addStudent("Taylor Swift", 1008);
+					studentManager.addStudent("Mariah Carey", 1009);
+					studentManager.addStudent("Justin Bieber", 1010);
+					studentManager.addStudent("Katy Perry", 1011);
+					studentManager.addStudent("Ed Sheeran", 1012);
+					studentManager.addStudent("Demi Lovato", 1013);
+					studentManager.addStudent("Paris Hilton", 1014);
+					studentManager.addStudent("Selena Gomez", 1015);
+
+					break;
 				case 1:
 					AddStudentUI.addStudentMenu(studentManager);
 					break;
