@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6e0e8d-b76b-43bb-9647-3c0dbe0e8b37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/StudentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/StudentManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/courses.ser" beforeDir="false" afterPath="$PROJECT_DIR$/data/courses.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/AddCourseUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/AddCourseUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddCourseUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCourseUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,33 +77,39 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="JAVA/" value="1" />
+          <entry key="java" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="9" />
+          <entry key="UML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="273" />
+          <entry key="java" value="340" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="273" />
+          <entry key="JAVA" value="340" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddCourseUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+            <state relative-caret-position="442">
+              <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -111,12 +117,534 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="10">
+              <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
               <folding>
                 <element signature="e#11848#11849#0" expanded="true" />
                 <element signature="e#11881#11882#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="162.3125" y="1311.0">Professor</node>
+                <node x="1304.3768438663994" y="1300.0">EntityManagerInterface</node>
+                <node x="899.7094742063482" y="320.0">RegisteredCourse</node>
+                <node x="1725.9369346590468" y="2847.0">ScannerManager</node>
+                <node x="987.9423200568756" y="2353.0">CourseManager</node>
+                <node x="963.9289981511101" y="3069.0">RegisterStudentUI</node>
+                <node x="1124.0844742063482" y="0.0">Component</node>
+                <node x="614.3589867235421" y="1577.0">Course</node>
+                <node x="1466.7708333333333" y="3243.0">AppUI</node>
+                <node x="566.7147124368245" y="2891.5">RegistrationManager</node>
+                <node x="1036.4839867235423" y="1344.0">Tutorial</node>
+                <node x="1701.3173200568756" y="1344.0">CustomException</node>
+                <node x="1904.9369346590468" y="1786.0">StudentManager</node>
+                <node x="695.0844742063482" y="716.0">Student</node>
+                <node x="796.4286013257134" y="1344.0">Lab</node>
+                <node x="1639.1869346590468" y="3069.5">ViewCourseMenuUI</node>
+                <node x="781.8036013257134" y="934.0">Lesson</node>
+                <node x="299.02026799238" y="3069.0">AddCourseUI</node>
+                <node x="2068.9369346590465" y="3080.5">ViewStudentMenuUI</node>
+                <node x="0.0" y="1808.0">ProfessorManager</node>
+                <node x="2461.9369346590465" y="3069.0">AddStudentUI</node>
+                <node x="208.5625" y="397.0">Person</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="RegistrationManager" target="Tutorial">
+                  <point x="113.11111111111109" y="-36.5" />
+                  <point x="934.3258235479356" y="2827.0" />
+                  <point x="977.4423200568756" y="2827.0" />
+                  <point x="977.4423200568756" y="1547.0" />
+                  <point x="1079.9839867235423" y="1547.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="ScannerManager" target="CustomException">
+                  <point x="80.5" y="-81.0" />
+                  <point x="1967.4369346590468" y="2827.0" />
+                  <point x="1834.6458333333333" y="2827.0" />
+                  <point x="1834.6458333333333" y="1547.0" />
+                  <point x="1782.983986723542" y="1547.0" />
+                  <point x="11.666666666666515" y="14.5" />
+                </edge>
+                <edge source="CourseManager" target="RegisteredCourse">
+                  <point x="91.58333333333326" y="-202.0" />
+                  <point x="1315.0256533902088" y="2263.0" />
+                  <point x="1515.8768438663994" y="2263.0" />
+                  <point x="1515.8768438663994" y="696.0" />
+                  <point x="1098.9951884920627" y="696.0" />
+                  <point x="44.28571428571445" y="158.0" />
+                </edge>
+                <edge source="AddCourseUI" target="ProfessorManager">
+                  <point x="-140.625" y="-37.0" />
+                  <point x="345.89526799238" y="3049.0" />
+                  <point x="172.5" y="3049.0" />
+                  <point x="172.5" y="2333.0" />
+                  <point x="269.16666666666674" y="2333.0" />
+                  <point x="107.66666666666674" y="92.0" />
+                </edge>
+                <edge source="Course" target="Tutorial">
+                  <point x="119.34999999999991" y="-323.0" />
+                  <point x="904.208986723542" y="1527.0" />
+                  <point x="1045.1839867235424" y="1527.0" />
+                  <point x="-34.799999999999955" y="14.5" />
+                </edge>
+                <edge source="Lab" target="Lesson">
+                  <point x="0.0" y="-14.5" />
+                  <point x="829.4286013257134" y="1270.0" />
+                  <point x="865.5536013257134" y="1270.0" />
+                  <point x="-83.75" y="158.0" />
+                </edge>
+                <edge source="ViewCourseMenuUI" target="CourseManager">
+                  <point x="-76.25" y="-36.5" />
+                  <point x="1715.4369346590468" y="2797.0" />
+                  <point x="1358.013748628304" y="2797.0" />
+                  <point x="134.57142857142844" y="202.0" />
+                </edge>
+                <edge source="ViewStudentMenuUI" target="RegisteredCourse">
+                  <point x="93.25" y="-25.5" />
+                  <point x="2348.6869346590465" y="3049.0" />
+                  <point x="2395.1875" y="3049.0" />
+                  <point x="2395.1875" y="676.0" />
+                  <point x="1187.5666170634913" y="676.0" />
+                  <point x="132.85714285714312" y="158.0" />
+                </edge>
+                <edge source="Tutorial" target="Student">
+                  <point x="29.0" y="-14.5" />
+                  <point x="1108.9839867235423" y="1280.0" />
+                  <point x="1127.3036013257133" y="1280.0" />
+                  <point x="1127.3036013257133" y="904.0" />
+                  <point x="917.7094742063482" y="904.0" />
+                  <point x="17.125" y="59.0" />
+                </edge>
+                <edge source="Lab" target="Student">
+                  <point x="-22.0" y="-14.5" />
+                  <point x="807.4286013257134" y="1270.0" />
+                  <point x="672.89526799238" y="1270.0" />
+                  <point x="672.89526799238" y="914.0" />
+                  <point x="814.9594742063482" y="914.0" />
+                  <point x="-85.625" y="59.0" />
+                </edge>
+                <edge source="RegistrationManager" target="Course">
+                  <point x="56.55555555555554" y="-36.5" />
+                  <point x="877.77026799238" y="2777.0" />
+                  <point x="680.0844742063482" y="2777.0" />
+                  <point x="680.0844742063482" y="2333.0" />
+                  <point x="648.458986723542" y="2333.0" />
+                  <point x="-136.4000000000001" y="323.0" />
+                </edge>
+                <edge source="AppUI" target="ViewStudentMenuUI">
+                  <point x="50.769230769230944" y="-37.0" />
+                  <point x="1600.0400641025642" y="3203.0" />
+                  <point x="2255.4369346590465" y="3203.0" />
+                  <point x="0.0" y="25.5" />
+                </edge>
+                <edge source="AppUI" target="AddStudentUI">
+                  <point x="63.46153846153857" y="-37.0" />
+                  <point x="1612.7323717948718" y="3213.0" />
+                  <point x="2602.4369346590465" y="3213.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="Student" target="RegisteredCourse">
+                  <point x="51.375" y="-59.0" />
+                  <point x="951.9594742063482" y="696.0" />
+                  <point x="1010.423759920634" y="696.0" />
+                  <point x="-44.28571428571422" y="158.0" />
+                </edge>
+                <edge source="Tutorial" target="Lesson">
+                  <point x="0.0" y="-14.5" />
+                  <point x="1079.9839867235423" y="1270.0" />
+                  <point x="1033.0536013257133" y="1270.0" />
+                  <point x="83.75" y="158.0" />
+                </edge>
+                <edge source="AppUI" target="ProfessorManager">
+                  <point x="-63.46153846153857" y="-37.0" />
+                  <point x="1485.8092948717947" y="3213.0" />
+                  <point x="123.60416666666652" y="3213.0" />
+                  <point x="123.60416666666652" y="2333.0" />
+                  <point x="161.5" y="2333.0" />
+                  <point x="0.0" y="92.0" />
+                </edge>
+                <edge source="AppUI" target="RegistrationManager">
+                  <point x="-38.07692307692287" y="-37.0" />
+                  <point x="1511.1939102564104" y="3193.0" />
+                  <point x="684.52026799238" y="3193.0" />
+                  <point x="684.52026799238" y="3029.0" />
+                  <point x="651.5480457701578" y="3029.0" />
+                  <point x="-169.66666666666663" y="36.5" />
+                </edge>
+                <edge source="RegisterStudentUI" target="CourseManager">
+                  <point x="0.0" y="-37.0" />
+                  <point x="1201.4289981511101" y="2807.0" />
+                  <point x="1156.1566057711614" y="2807.0" />
+                  <point x="-67.28571428571422" y="202.0" />
+                </edge>
+                <edge source="CourseManager" target="Student">
+                  <point x="39.25" y="-202.0" />
+                  <point x="1262.6923200568756" y="2243.0" />
+                  <point x="1293.8768438663994" y="2243.0" />
+                  <point x="1293.8768438663994" y="894.0" />
+                  <point x="951.9594742063482" y="894.0" />
+                  <point x="51.375" y="59.0" />
+                </edge>
+                <edge source="ProfessorManager" target="Professor">
+                  <point x="40.375" y="-92.0" />
+                  <point x="201.875" y="1557.0" />
+                  <point x="227.3125" y="1557.0" />
+                  <point x="-26.0" y="47.5" />
+                </edge>
+                <edge source="CourseManager" target="Lesson">
+                  <point x="13.083333333333485" y="-202.0" />
+                  <point x="1236.525653390209" y="2313.0" />
+                  <point x="1198.6089867235423" y="2313.0" />
+                  <point x="1198.6089867235423" y="1270.0" />
+                  <point x="1088.8869346590468" y="1270.0" />
+                  <point x="139.58333333333348" y="158.0" />
+                </edge>
+                <edge source="CourseManager" target="StudentManager">
+                  <point x="222.41666666666652" y="-202.0" />
+                  <point x="1445.858986723542" y="2313.0" />
+                  <point x="1926.8655060876183" y="2313.0" />
+                  <point x="-131.57142857142844" y="114.0" />
+                </edge>
+                <edge source="ViewStudentMenuUI" target="StudentManager">
+                  <point x="-31.083333333333485" y="-25.5" />
+                  <point x="2224.3536013257135" y="3049.0" />
+                  <point x="2198.77026799238" y="3049.0" />
+                  <point x="2198.77026799238" y="2333.0" />
+                  <point x="2102.2940775161896" y="2333.0" />
+                  <point x="43.85714285714312" y="114.0" />
+                </edge>
+                <edge source="CourseManager" target="Lab">
+                  <point x="-65.41666666666652" y="-202.0" />
+                  <point x="1158.025653390209" y="2313.0" />
+                  <point x="1119.2625" y="2313.0" />
+                  <point x="1119.2625" y="1457.0" />
+                  <point x="855.8286013257135" y="1457.0" />
+                  <point x="26.40000000000009" y="14.5" />
+                </edge>
+                <edge source="AddCourseUI" target="ScannerManager">
+                  <point x="140.625" y="-37.0" />
+                  <point x="627.14526799238" y="3049.0" />
+                  <point x="1766.1869346590468" y="3049.0" />
+                  <point x="-120.75" y="81.0" />
+                </edge>
+                <edge source="CourseManager" target="Course">
+                  <point x="-170.08333333333348" y="-202.0" />
+                  <point x="1053.358986723542" y="2313.0" />
+                  <point x="853.0589867235421" y="2313.0" />
+                  <point x="68.20000000000005" y="323.0" />
+                </edge>
+                <edge source="ViewCourseMenuUI" target="ScannerManager">
+                  <point x="76.25" y="-36.5" />
+                  <point x="1867.9369346590468" y="3049.0" />
+                  <point x="1846.6869346590468" y="3049.0" />
+                  <point x="-40.25" y="81.0" />
+                </edge>
+                <edge source="Lesson" target="Student">
+                  <point x="-83.75" y="-158.0" />
+                  <point x="865.5536013257134" y="914.0" />
+                  <point x="849.2094742063482" y="914.0" />
+                  <point x="-51.375" y="59.0" />
+                </edge>
+                <edge source="ViewStudentMenuUI" target="Student">
+                  <point x="31.083333333333485" y="-25.5" />
+                  <point x="2286.5202679923805" y="3039.0" />
+                  <point x="2228.89526799238" y="3039.0" />
+                  <point x="2228.89526799238" y="854.0" />
+                  <point x="1088.9594742063482" y="854.0" />
+                  <point x="188.375" y="59.0" />
+                </edge>
+                <edge source="CourseManager" target="Tutorial">
+                  <point x="-39.25" y="-202.0" />
+                  <point x="1184.1923200568756" y="2333.0" />
+                  <point x="1171.7125" y="2333.0" />
+                  <point x="1171.7125" y="1447.0" />
+                  <point x="1097.3839867235424" y="1447.0" />
+                  <point x="17.40000000000009" y="14.5" />
+                </edge>
+                <edge source="RegistrationManager" target="Student">
+                  <point x="-113.11111111111109" y="-36.5" />
+                  <point x="708.1036013257134" y="2807.0" />
+                  <point x="471.5" y="2807.0" />
+                  <point x="471.5" y="884.0" />
+                  <point x="712.2094742063482" y="884.0" />
+                  <point x="-188.375" y="59.0" />
+                </edge>
+                <edge source="RegistrationManager" target="Lesson">
+                  <point x="-56.55555555555554" y="-36.5" />
+                  <point x="764.6591568812689" y="2797.0" />
+                  <point x="482.5" y="2797.0" />
+                  <point x="482.5" y="1280.0" />
+                  <point x="809.7202679923802" y="1280.0" />
+                  <point x="-139.58333333333326" y="158.0" />
+                </edge>
+                <edge source="ViewStudentMenuUI" target="Component">
+                  <point x="155.41666666666652" y="-25.5" />
+                  <point x="2410.8536013257135" y="3049.0" />
+                  <point x="2406.1875" y="3049.0" />
+                  <point x="2406.1875" y="270.0" />
+                  <point x="1294.7094742063482" y="270.0" />
+                  <point x="79.625" y="125.0" />
+                </edge>
+                <edge source="CourseManager" target="Component">
+                  <point x="143.91666666666674" y="-202.0" />
+                  <point x="1367.3589867235423" y="2283.0" />
+                  <point x="1572.27026799238" y="2283.0" />
+                  <point x="1572.27026799238" y="290.0" />
+                  <point x="1249.2094742063482" y="290.0" />
+                  <point x="34.125" y="125.0" />
+                </edge>
+                <edge source="RegistrationManager" target="StudentManager">
+                  <point x="226.22222222222223" y="-36.5" />
+                  <point x="1047.4369346590468" y="2827.0" />
+                  <point x="1469.4423200568756" y="2827.0" />
+                  <point x="1469.4423200568756" y="2323.0" />
+                  <point x="1970.722648944761" y="2323.0" />
+                  <point x="-87.71428571428578" y="114.0" />
+                </edge>
+                <edge source="Course" target="Lab">
+                  <point x="51.15000000000009" y="-323.0" />
+                  <point x="836.0089867235422" y="1547.0" />
+                  <point x="816.2286013257134" y="1547.0" />
+                  <point x="-13.200000000000045" y="14.5" />
+                </edge>
+                <edge source="AddStudentUI" target="StudentManager">
+                  <point x="70.25" y="-37.0" />
+                  <point x="2672.6869346590465" y="2323.0" />
+                  <point x="2146.1512203733328" y="2323.0" />
+                  <point x="87.71428571428578" y="114.0" />
+                </edge>
+                <edge source="CourseManager" target="EntityManagerInterface">
+                  <point x="65.41666666666674" y="-202.0" />
+                  <point x="1288.8589867235423" y="2253.0" />
+                  <point x="1404.8768438663994" y="2253.0" />
+                  <point x="0.0" y="58.5" />
+                </edge>
+                <edge source="Course" target="Student">
+                  <point x="17.049999999999955" y="-323.0" />
+                  <point x="801.9089867235421" y="1487.0" />
+                  <point x="634.4625" y="1487.0" />
+                  <point x="634.4625" y="904.0" />
+                  <point x="780.7094742063482" y="904.0" />
+                  <point x="-119.875" y="59.0" />
+                </edge>
+                <edge source="ViewStudentMenuUI" target="ScannerManager">
+                  <point x="-155.41666666666652" y="-25.5" />
+                  <point x="2100.0202679923805" y="3049.0" />
+                  <point x="1927.1869346590468" y="3049.0" />
+                  <point x="40.25" y="81.0" />
+                </edge>
+                <edge source="Student" target="Person">
+                  <point x="-51.375" y="-59.0" />
+                  <point x="849.2094742063482" y="656.0" />
+                  <point x="365.1875" y="656.0" />
+                  <point x="67.125" y="81.0" />
+                </edge>
+                <edge source="RegistrationManager" target="Lab">
+                  <point x="0.0" y="-36.5" />
+                  <point x="821.2147124368245" y="2787.0" />
+                  <point x="603.8589867235421" y="2787.0" />
+                  <point x="603.8589867235421" y="1547.0" />
+                  <point x="803.0286013257133" y="1547.0" />
+                  <point x="-26.40000000000009" y="14.5" />
+                </edge>
+                <edge source="Course" target="Component">
+                  <point x="-85.25" y="-323.0" />
+                  <point x="699.6089867235421" y="1517.0" />
+                  <point x="576.025" y="1517.0" />
+                  <point x="576.025" y="270.0" />
+                  <point x="1135.4594742063482" y="270.0" />
+                  <point x="-79.625" y="125.0" />
+                </edge>
+                <edge source="StudentManager" target="EntityManagerInterface">
+                  <point x="-134.3125" y="-114.0" />
+                  <point x="1924.1244346590468" y="1537.0" />
+                  <point x="1471.8768438663994" y="1537.0" />
+                  <point x="67.0" y="58.5" />
+                </edge>
+                <edge source="StudentManager" target="CustomException">
+                  <point x="-57.5625" y="-114.0" />
+                  <point x="2000.8744346590468" y="1517.0" />
+                  <point x="1829.650653390209" y="1517.0" />
+                  <point x="58.333333333333485" y="14.5" />
+                </edge>
+                <edge source="RegistrationManager" target="RegisteredCourse">
+                  <point x="-226.22222222222217" y="-36.5" />
+                  <point x="594.9924902146023" y="2827.0" />
+                  <point x="449.5" y="2827.0" />
+                  <point x="449.5" y="676.0" />
+                  <point x="921.8523313492053" y="676.0" />
+                  <point x="-132.8571428571429" y="158.0" />
+                </edge>
+                <edge source="RegisterStudentUI" target="RegistrationManager">
+                  <point x="-158.33333333333348" y="-37.0" />
+                  <point x="1043.0956648177767" y="3029.0" />
+                  <point x="990.8813791034911" y="3029.0" />
+                  <point x="169.66666666666663" y="36.5" />
+                </edge>
+                <edge source="Course" target="Professor">
+                  <point x="-119.35000000000014" y="-323.0" />
+                  <point x="665.508986723542" y="1527.0" />
+                  <point x="305.3125" y="1527.0" />
+                  <point x="52.0" y="47.5" />
+                </edge>
+                <edge source="AppUI" target="CourseManager">
+                  <point x="0.0" y="-37.0" />
+                  <point x="1549.2708333333333" y="3163.0" />
+                  <point x="1617.6869346590468" y="3163.0" />
+                  <point x="1617.6869346590468" y="2817.0" />
+                  <point x="1223.4423200568756" y="2817.0" />
+                  <point x="0.0" y="202.0" />
+                </edge>
+                <edge source="StudentManager" target="Student">
+                  <point x="57.5625" y="-114.0" />
+                  <point x="2115.9994346590465" y="1557.0" />
+                  <point x="2104.052083333333" y="1557.0" />
+                  <point x="2104.052083333333" y="864.0" />
+                  <point x="1054.7094742063482" y="864.0" />
+                  <point x="154.125" y="59.0" />
+                </edge>
+                <edge source="AppUI" target="ViewCourseMenuUI">
+                  <point x="25.384615384615245" y="-37.0" />
+                  <point x="1574.6554487179485" y="3183.0" />
+                  <point x="1791.6869346590468" y="3183.0" />
+                  <point x="0.0" y="36.5" />
+                </edge>
+                <edge source="RegisterStudentUI" target="StudentManager">
+                  <point x="158.33333333333326" y="-37.0" />
+                  <point x="1359.7623314844434" y="3039.0" />
+                  <point x="1606.6869346590468" y="3039.0" />
+                  <point x="1606.6869346590468" y="2333.0" />
+                  <point x="2014.579791801904" y="2333.0" />
+                  <point x="-43.85714285714266" y="114.0" />
+                </edge>
+                <edge source="AppUI" target="StudentManager">
+                  <point x="76.15384615384619" y="-37.0" />
+                  <point x="1625.4246794871794" y="3223.0" />
+                  <point x="2753.4369346590465" y="3223.0" />
+                  <point x="2753.4369346590465" y="2313.0" />
+                  <point x="2190.008363230475" y="2313.0" />
+                  <point x="131.57142857142844" y="114.0" />
+                </edge>
+                <edge source="ProfessorManager" target="EntityManagerInterface">
+                  <point x="121.125" y="-92.0" />
+                  <point x="282.625" y="1557.0" />
+                  <point x="1337.8768438663994" y="1557.0" />
+                  <point x="-67.0" y="58.5" />
+                </edge>
+                <edge source="StudentManager" target="Component">
+                  <point x="134.3125" y="-114.0" />
+                  <point x="2192.7494346590465" y="1537.0" />
+                  <point x="2126.052083333333" y="1537.0" />
+                  <point x="2126.052083333333" y="280.0" />
+                  <point x="1271.9594742063482" y="280.0" />
+                  <point x="56.875" y="125.0" />
+                </edge>
+                <edge source="AddStudentUI" target="ScannerManager">
+                  <point x="-70.25" y="-37.0" />
+                  <point x="2532.1869346590465" y="3029.0" />
+                  <point x="2007.6869346590468" y="3029.0" />
+                  <point x="120.75" y="81.0" />
+                </edge>
+                <edge source="CourseManager" target="CustomException">
+                  <point x="196.25" y="-202.0" />
+                  <point x="1419.6923200568756" y="2303.0" />
+                  <point x="1599.8536013257133" y="2303.0" />
+                  <point x="1599.8536013257133" y="1557.0" />
+                  <point x="1736.3173200568756" y="1557.0" />
+                  <point x="-35.0" y="14.5" />
+                </edge>
+                <edge source="ViewStudentMenuUI" target="CourseManager">
+                  <point x="-93.25" y="-25.5" />
+                  <point x="2162.1869346590465" y="3049.0" />
+                  <point x="2115.8119346590465" y="3049.0" />
+                  <point x="2115.8119346590465" y="2787.0" />
+                  <point x="1425.2994629140182" y="2787.0" />
+                  <point x="201.85714285714266" y="202.0" />
+                </edge>
+                <edge source="RegisteredCourse" target="Component">
+                  <point x="77.5" y="-158.0" />
+                  <point x="1132.2094742063482" y="300.0" />
+                  <point x="1203.7094742063482" y="300.0" />
+                  <point x="-11.375" y="125.0" />
+                </edge>
+                <edge source="Professor" target="Person">
+                  <point x="-45.5" y="-47.5" />
+                  <point x="207.8125" y="1280.0" />
+                  <point x="247.8125" y="1280.0" />
+                  <point x="247.8125" y="696.0" />
+                  <point x="230.9375" y="696.0" />
+                  <point x="-67.125" y="81.0" />
+                </edge>
+                <edge source="AddCourseUI" target="CourseManager">
+                  <point x="46.875" y="-37.0" />
+                  <point x="533.39526799238" y="3039.0" />
+                  <point x="1169.0844742063482" y="3039.0" />
+                  <point x="1169.0844742063482" y="2817.0" />
+                  <point x="1088.870891485447" y="2817.0" />
+                  <point x="-134.57142857142867" y="202.0" />
+                </edge>
+                <edge source="StudentManager" target="RegisteredCourse">
+                  <point x="95.9375" y="-114.0" />
+                  <point x="2154.3744346590465" y="1547.0" />
+                  <point x="2115.052083333333" y="1547.0" />
+                  <point x="2115.052083333333" y="686.0" />
+                  <point x="1143.2809027777769" y="686.0" />
+                  <point x="88.57142857142867" y="158.0" />
+                </edge>
+                <edge source="RegistrationManager" target="CourseManager">
+                  <point x="169.66666666666669" y="-36.5" />
+                  <point x="990.8813791034911" y="2827.0" />
+                  <point x="1021.5851771997327" y="2827.0" />
+                  <point x="-201.8571428571429" y="202.0" />
+                </edge>
+                <edge source="AppUI" target="RegisterStudentUI">
+                  <point x="-12.692307692307622" y="-37.0" />
+                  <point x="1536.5785256410256" y="3173.0" />
+                  <point x="1201.4289981511101" y="3173.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="AppUI" target="AddCourseUI">
+                  <point x="-50.769230769230944" y="-37.0" />
+                  <point x="1498.5016025641023" y="3203.0" />
+                  <point x="486.52026799238" y="3203.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="CourseManager" target="Professor">
+                  <point x="-117.75" y="-202.0" />
+                  <point x="1105.6923200568756" y="2333.0" />
+                  <point x="1097.2625" y="2333.0" />
+                  <point x="1097.2625" y="1477.0" />
+                  <point x="331.3125" y="1477.0" />
+                  <point x="78.0" y="47.5" />
+                </edge>
+                <edge source="AddCourseUI" target="Professor">
+                  <point x="-46.875" y="-37.0" />
+                  <point x="439.64526799238" y="3039.0" />
+                  <point x="333.5" y="3039.0" />
+                  <point x="333.5" y="1547.0" />
+                  <point x="253.3125" y="1547.0" />
+                  <point x="0.0" y="47.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.33942428035043815" x="1576.717806823981" y="2059.0124221866527" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -131,10 +659,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CustomException.java">
+        <entry file="file://$PROJECT_DIR$/src/AppUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="49">
+              <caret line="22" column="142" selection-start-line="22" selection-start-column="142" selection-end-line="22" selection-end-column="142" />
             </state>
           </provider>
         </entry>
@@ -142,13 +670,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScannerManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
+            <state relative-caret-position="-102">
               <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>course listin</find>
+      <find>name 0</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -158,9 +692,10 @@
       <list>
         <option value="$PROJECT_DIR$/Course.java" />
         <option value="$USER_HOME$/test/src/Component.java" />
-        <option value="$PROJECT_DIR$/src/AddCourseUI.java" />
         <option value="$PROJECT_DIR$/src/CustomException.java" />
         <option value="$PROJECT_DIR$/src/StudentManager.java" />
+        <option value="$PROJECT_DIR$/src/AddCourseUI.java" />
+        <option value="$PROJECT_DIR$/src/AppUI.java" />
         <option value="$PROJECT_DIR$/src/CourseManager.java" />
       </list>
     </option>
@@ -197,12 +732,6 @@
               <item name="CZ2002 Code XQ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CZ2002_code_CQ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CZ2002 Code XQ" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -214,13 +743,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542311904561" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -267,12 +797,12 @@
       <workItem from="1541681044690" duration="1157000" />
       <workItem from="1541695429829" duration="56000" />
       <workItem from="1541695503898" duration="4000" />
-      <workItem from="1542309434280" duration="541000" />
+      <workItem from="1542309434280" duration="2437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1899000" />
+    <option name="totallyTimeSpent" value="3795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -289,7 +819,7 @@
       <window_info anchor="bottom" id="Sequence" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24021353" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14234875" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -374,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScannerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-578">
@@ -402,10 +925,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Professor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScannerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddCourseUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="22" column="142" selection-start-line="22" selection-start-column="142" selection-end-line="22" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="10">
+          <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
           <folding>
             <element signature="e#11848#11849#0" expanded="true" />
             <element signature="e#11881#11882#0" expanded="true" />
@@ -413,16 +964,553 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddCourseUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="162.3125" y="1311.0">Professor</node>
+            <node x="1304.3768438663994" y="1300.0">EntityManagerInterface</node>
+            <node x="899.7094742063482" y="320.0">RegisteredCourse</node>
+            <node x="1725.9369346590468" y="2847.0">ScannerManager</node>
+            <node x="987.9423200568756" y="2353.0">CourseManager</node>
+            <node x="963.9289981511101" y="3069.0">RegisterStudentUI</node>
+            <node x="1124.0844742063482" y="0.0">Component</node>
+            <node x="614.3589867235421" y="1577.0">Course</node>
+            <node x="1466.7708333333333" y="3243.0">AppUI</node>
+            <node x="566.7147124368245" y="2891.5">RegistrationManager</node>
+            <node x="1036.4839867235423" y="1344.0">Tutorial</node>
+            <node x="1701.3173200568756" y="1344.0">CustomException</node>
+            <node x="1904.9369346590468" y="1786.0">StudentManager</node>
+            <node x="695.0844742063482" y="716.0">Student</node>
+            <node x="796.4286013257134" y="1344.0">Lab</node>
+            <node x="1639.1869346590468" y="3069.5">ViewCourseMenuUI</node>
+            <node x="781.8036013257134" y="934.0">Lesson</node>
+            <node x="299.02026799238" y="3069.0">AddCourseUI</node>
+            <node x="2068.9369346590465" y="3080.5">ViewStudentMenuUI</node>
+            <node x="0.0" y="1808.0">ProfessorManager</node>
+            <node x="2461.9369346590465" y="3069.0">AddStudentUI</node>
+            <node x="208.5625" y="397.0">Person</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="RegistrationManager" target="Tutorial">
+              <point x="113.11111111111109" y="-36.5" />
+              <point x="934.3258235479356" y="2827.0" />
+              <point x="977.4423200568756" y="2827.0" />
+              <point x="977.4423200568756" y="1547.0" />
+              <point x="1079.9839867235423" y="1547.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="ScannerManager" target="CustomException">
+              <point x="80.5" y="-81.0" />
+              <point x="1967.4369346590468" y="2827.0" />
+              <point x="1834.6458333333333" y="2827.0" />
+              <point x="1834.6458333333333" y="1547.0" />
+              <point x="1782.983986723542" y="1547.0" />
+              <point x="11.666666666666515" y="14.5" />
+            </edge>
+            <edge source="CourseManager" target="RegisteredCourse">
+              <point x="91.58333333333326" y="-202.0" />
+              <point x="1315.0256533902088" y="2263.0" />
+              <point x="1515.8768438663994" y="2263.0" />
+              <point x="1515.8768438663994" y="696.0" />
+              <point x="1098.9951884920627" y="696.0" />
+              <point x="44.28571428571445" y="158.0" />
+            </edge>
+            <edge source="AddCourseUI" target="ProfessorManager">
+              <point x="-140.625" y="-37.0" />
+              <point x="345.89526799238" y="3049.0" />
+              <point x="172.5" y="3049.0" />
+              <point x="172.5" y="2333.0" />
+              <point x="269.16666666666674" y="2333.0" />
+              <point x="107.66666666666674" y="92.0" />
+            </edge>
+            <edge source="Course" target="Tutorial">
+              <point x="119.34999999999991" y="-323.0" />
+              <point x="904.208986723542" y="1527.0" />
+              <point x="1045.1839867235424" y="1527.0" />
+              <point x="-34.799999999999955" y="14.5" />
+            </edge>
+            <edge source="Lab" target="Lesson">
+              <point x="0.0" y="-14.5" />
+              <point x="829.4286013257134" y="1270.0" />
+              <point x="865.5536013257134" y="1270.0" />
+              <point x="-83.75" y="158.0" />
+            </edge>
+            <edge source="ViewCourseMenuUI" target="CourseManager">
+              <point x="-76.25" y="-36.5" />
+              <point x="1715.4369346590468" y="2797.0" />
+              <point x="1358.013748628304" y="2797.0" />
+              <point x="134.57142857142844" y="202.0" />
+            </edge>
+            <edge source="ViewStudentMenuUI" target="RegisteredCourse">
+              <point x="93.25" y="-25.5" />
+              <point x="2348.6869346590465" y="3049.0" />
+              <point x="2395.1875" y="3049.0" />
+              <point x="2395.1875" y="676.0" />
+              <point x="1187.5666170634913" y="676.0" />
+              <point x="132.85714285714312" y="158.0" />
+            </edge>
+            <edge source="Tutorial" target="Student">
+              <point x="29.0" y="-14.5" />
+              <point x="1108.9839867235423" y="1280.0" />
+              <point x="1127.3036013257133" y="1280.0" />
+              <point x="1127.3036013257133" y="904.0" />
+              <point x="917.7094742063482" y="904.0" />
+              <point x="17.125" y="59.0" />
+            </edge>
+            <edge source="Lab" target="Student">
+              <point x="-22.0" y="-14.5" />
+              <point x="807.4286013257134" y="1270.0" />
+              <point x="672.89526799238" y="1270.0" />
+              <point x="672.89526799238" y="914.0" />
+              <point x="814.9594742063482" y="914.0" />
+              <point x="-85.625" y="59.0" />
+            </edge>
+            <edge source="RegistrationManager" target="Course">
+              <point x="56.55555555555554" y="-36.5" />
+              <point x="877.77026799238" y="2777.0" />
+              <point x="680.0844742063482" y="2777.0" />
+              <point x="680.0844742063482" y="2333.0" />
+              <point x="648.458986723542" y="2333.0" />
+              <point x="-136.4000000000001" y="323.0" />
+            </edge>
+            <edge source="AppUI" target="ViewStudentMenuUI">
+              <point x="50.769230769230944" y="-37.0" />
+              <point x="1600.0400641025642" y="3203.0" />
+              <point x="2255.4369346590465" y="3203.0" />
+              <point x="0.0" y="25.5" />
+            </edge>
+            <edge source="AppUI" target="AddStudentUI">
+              <point x="63.46153846153857" y="-37.0" />
+              <point x="1612.7323717948718" y="3213.0" />
+              <point x="2602.4369346590465" y="3213.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="Student" target="RegisteredCourse">
+              <point x="51.375" y="-59.0" />
+              <point x="951.9594742063482" y="696.0" />
+              <point x="1010.423759920634" y="696.0" />
+              <point x="-44.28571428571422" y="158.0" />
+            </edge>
+            <edge source="Tutorial" target="Lesson">
+              <point x="0.0" y="-14.5" />
+              <point x="1079.9839867235423" y="1270.0" />
+              <point x="1033.0536013257133" y="1270.0" />
+              <point x="83.75" y="158.0" />
+            </edge>
+            <edge source="AppUI" target="ProfessorManager">
+              <point x="-63.46153846153857" y="-37.0" />
+              <point x="1485.8092948717947" y="3213.0" />
+              <point x="123.60416666666652" y="3213.0" />
+              <point x="123.60416666666652" y="2333.0" />
+              <point x="161.5" y="2333.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="AppUI" target="RegistrationManager">
+              <point x="-38.07692307692287" y="-37.0" />
+              <point x="1511.1939102564104" y="3193.0" />
+              <point x="684.52026799238" y="3193.0" />
+              <point x="684.52026799238" y="3029.0" />
+              <point x="651.5480457701578" y="3029.0" />
+              <point x="-169.66666666666663" y="36.5" />
+            </edge>
+            <edge source="RegisterStudentUI" target="CourseManager">
+              <point x="0.0" y="-37.0" />
+              <point x="1201.4289981511101" y="2807.0" />
+              <point x="1156.1566057711614" y="2807.0" />
+              <point x="-67.28571428571422" y="202.0" />
+            </edge>
+            <edge source="CourseManager" target="Student">
+              <point x="39.25" y="-202.0" />
+              <point x="1262.6923200568756" y="2243.0" />
+              <point x="1293.8768438663994" y="2243.0" />
+              <point x="1293.8768438663994" y="894.0" />
+              <point x="951.9594742063482" y="894.0" />
+              <point x="51.375" y="59.0" />
+            </edge>
+            <edge source="ProfessorManager" target="Professor">
+              <point x="40.375" y="-92.0" />
+              <point x="201.875" y="1557.0" />
+              <point x="227.3125" y="1557.0" />
+              <point x="-26.0" y="47.5" />
+            </edge>
+            <edge source="CourseManager" target="Lesson">
+              <point x="13.083333333333485" y="-202.0" />
+              <point x="1236.525653390209" y="2313.0" />
+              <point x="1198.6089867235423" y="2313.0" />
+              <point x="1198.6089867235423" y="1270.0" />
+              <point x="1088.8869346590468" y="1270.0" />
+              <point x="139.58333333333348" y="158.0" />
+            </edge>
+            <edge source="CourseManager" target="StudentManager">
+              <point x="222.41666666666652" y="-202.0" />
+              <point x="1445.858986723542" y="2313.0" />
+              <point x="1926.8655060876183" y="2313.0" />
+              <point x="-131.57142857142844" y="114.0" />
+            </edge>
+            <edge source="ViewStudentMenuUI" target="StudentManager">
+              <point x="-31.083333333333485" y="-25.5" />
+              <point x="2224.3536013257135" y="3049.0" />
+              <point x="2198.77026799238" y="3049.0" />
+              <point x="2198.77026799238" y="2333.0" />
+              <point x="2102.2940775161896" y="2333.0" />
+              <point x="43.85714285714312" y="114.0" />
+            </edge>
+            <edge source="CourseManager" target="Lab">
+              <point x="-65.41666666666652" y="-202.0" />
+              <point x="1158.025653390209" y="2313.0" />
+              <point x="1119.2625" y="2313.0" />
+              <point x="1119.2625" y="1457.0" />
+              <point x="855.8286013257135" y="1457.0" />
+              <point x="26.40000000000009" y="14.5" />
+            </edge>
+            <edge source="AddCourseUI" target="ScannerManager">
+              <point x="140.625" y="-37.0" />
+              <point x="627.14526799238" y="3049.0" />
+              <point x="1766.1869346590468" y="3049.0" />
+              <point x="-120.75" y="81.0" />
+            </edge>
+            <edge source="CourseManager" target="Course">
+              <point x="-170.08333333333348" y="-202.0" />
+              <point x="1053.358986723542" y="2313.0" />
+              <point x="853.0589867235421" y="2313.0" />
+              <point x="68.20000000000005" y="323.0" />
+            </edge>
+            <edge source="ViewCourseMenuUI" target="ScannerManager">
+              <point x="76.25" y="-36.5" />
+              <point x="1867.9369346590468" y="3049.0" />
+              <point x="1846.6869346590468" y="3049.0" />
+              <point x="-40.25" y="81.0" />
+            </edge>
+            <edge source="Lesson" target="Student">
+              <point x="-83.75" y="-158.0" />
+              <point x="865.5536013257134" y="914.0" />
+              <point x="849.2094742063482" y="914.0" />
+              <point x="-51.375" y="59.0" />
+            </edge>
+            <edge source="ViewStudentMenuUI" target="Student">
+              <point x="31.083333333333485" y="-25.5" />
+              <point x="2286.5202679923805" y="3039.0" />
+              <point x="2228.89526799238" y="3039.0" />
+              <point x="2228.89526799238" y="854.0" />
+              <point x="1088.9594742063482" y="854.0" />
+              <point x="188.375" y="59.0" />
+            </edge>
+            <edge source="CourseManager" target="Tutorial">
+              <point x="-39.25" y="-202.0" />
+              <point x="1184.1923200568756" y="2333.0" />
+              <point x="1171.7125" y="2333.0" />
+              <point x="1171.7125" y="1447.0" />
+              <point x="1097.3839867235424" y="1447.0" />
+              <point x="17.40000000000009" y="14.5" />
+            </edge>
+            <edge source="RegistrationManager" target="Student">
+              <point x="-113.11111111111109" y="-36.5" />
+              <point x="708.1036013257134" y="2807.0" />
+              <point x="471.5" y="2807.0" />
+              <point x="471.5" y="884.0" />
+              <point x="712.2094742063482" y="884.0" />
+              <point x="-188.375" y="59.0" />
+            </edge>
+            <edge source="RegistrationManager" target="Lesson">
+              <point x="-56.55555555555554" y="-36.5" />
+              <point x="764.6591568812689" y="2797.0" />
+              <point x="482.5" y="2797.0" />
+              <point x="482.5" y="1280.0" />
+              <point x="809.7202679923802" y="1280.0" />
+              <point x="-139.58333333333326" y="158.0" />
+            </edge>
+            <edge source="ViewStudentMenuUI" target="Component">
+              <point x="155.41666666666652" y="-25.5" />
+              <point x="2410.8536013257135" y="3049.0" />
+              <point x="2406.1875" y="3049.0" />
+              <point x="2406.1875" y="270.0" />
+              <point x="1294.7094742063482" y="270.0" />
+              <point x="79.625" y="125.0" />
+            </edge>
+            <edge source="CourseManager" target="Component">
+              <point x="143.91666666666674" y="-202.0" />
+              <point x="1367.3589867235423" y="2283.0" />
+              <point x="1572.27026799238" y="2283.0" />
+              <point x="1572.27026799238" y="290.0" />
+              <point x="1249.2094742063482" y="290.0" />
+              <point x="34.125" y="125.0" />
+            </edge>
+            <edge source="RegistrationManager" target="StudentManager">
+              <point x="226.22222222222223" y="-36.5" />
+              <point x="1047.4369346590468" y="2827.0" />
+              <point x="1469.4423200568756" y="2827.0" />
+              <point x="1469.4423200568756" y="2323.0" />
+              <point x="1970.722648944761" y="2323.0" />
+              <point x="-87.71428571428578" y="114.0" />
+            </edge>
+            <edge source="Course" target="Lab">
+              <point x="51.15000000000009" y="-323.0" />
+              <point x="836.0089867235422" y="1547.0" />
+              <point x="816.2286013257134" y="1547.0" />
+              <point x="-13.200000000000045" y="14.5" />
+            </edge>
+            <edge source="AddStudentUI" target="StudentManager">
+              <point x="70.25" y="-37.0" />
+              <point x="2672.6869346590465" y="2323.0" />
+              <point x="2146.1512203733328" y="2323.0" />
+              <point x="87.71428571428578" y="114.0" />
+            </edge>
+            <edge source="CourseManager" target="EntityManagerInterface">
+              <point x="65.41666666666674" y="-202.0" />
+              <point x="1288.8589867235423" y="2253.0" />
+              <point x="1404.8768438663994" y="2253.0" />
+              <point x="0.0" y="58.5" />
+            </edge>
+            <edge source="Course" target="Student">
+              <point x="17.049999999999955" y="-323.0" />
+              <point x="801.9089867235421" y="1487.0" />
+              <point x="634.4625" y="1487.0" />
+              <point x="634.4625" y="904.0" />
+              <point x="780.7094742063482" y="904.0" />
+              <point x="-119.875" y="59.0" />
+            </edge>
+            <edge source="ViewStudentMenuUI" target="ScannerManager">
+              <point x="-155.41666666666652" y="-25.5" />
+              <point x="2100.0202679923805" y="3049.0" />
+              <point x="1927.1869346590468" y="3049.0" />
+              <point x="40.25" y="81.0" />
+            </edge>
+            <edge source="Student" target="Person">
+              <point x="-51.375" y="-59.0" />
+              <point x="849.2094742063482" y="656.0" />
+              <point x="365.1875" y="656.0" />
+              <point x="67.125" y="81.0" />
+            </edge>
+            <edge source="RegistrationManager" target="Lab">
+              <point x="0.0" y="-36.5" />
+              <point x="821.2147124368245" y="2787.0" />
+              <point x="603.8589867235421" y="2787.0" />
+              <point x="603.8589867235421" y="1547.0" />
+              <point x="803.0286013257133" y="1547.0" />
+              <point x="-26.40000000000009" y="14.5" />
+            </edge>
+            <edge source="Course" target="Component">
+              <point x="-85.25" y="-323.0" />
+              <point x="699.6089867235421" y="1517.0" />
+              <point x="576.025" y="1517.0" />
+              <point x="576.025" y="270.0" />
+              <point x="1135.4594742063482" y="270.0" />
+              <point x="-79.625" y="125.0" />
+            </edge>
+            <edge source="StudentManager" target="EntityManagerInterface">
+              <point x="-134.3125" y="-114.0" />
+              <point x="1924.1244346590468" y="1537.0" />
+              <point x="1471.8768438663994" y="1537.0" />
+              <point x="67.0" y="58.5" />
+            </edge>
+            <edge source="StudentManager" target="CustomException">
+              <point x="-57.5625" y="-114.0" />
+              <point x="2000.8744346590468" y="1517.0" />
+              <point x="1829.650653390209" y="1517.0" />
+              <point x="58.333333333333485" y="14.5" />
+            </edge>
+            <edge source="RegistrationManager" target="RegisteredCourse">
+              <point x="-226.22222222222217" y="-36.5" />
+              <point x="594.9924902146023" y="2827.0" />
+              <point x="449.5" y="2827.0" />
+              <point x="449.5" y="676.0" />
+              <point x="921.8523313492053" y="676.0" />
+              <point x="-132.8571428571429" y="158.0" />
+            </edge>
+            <edge source="RegisterStudentUI" target="RegistrationManager">
+              <point x="-158.33333333333348" y="-37.0" />
+              <point x="1043.0956648177767" y="3029.0" />
+              <point x="990.8813791034911" y="3029.0" />
+              <point x="169.66666666666663" y="36.5" />
+            </edge>
+            <edge source="Course" target="Professor">
+              <point x="-119.35000000000014" y="-323.0" />
+              <point x="665.508986723542" y="1527.0" />
+              <point x="305.3125" y="1527.0" />
+              <point x="52.0" y="47.5" />
+            </edge>
+            <edge source="AppUI" target="CourseManager">
+              <point x="0.0" y="-37.0" />
+              <point x="1549.2708333333333" y="3163.0" />
+              <point x="1617.6869346590468" y="3163.0" />
+              <point x="1617.6869346590468" y="2817.0" />
+              <point x="1223.4423200568756" y="2817.0" />
+              <point x="0.0" y="202.0" />
+            </edge>
+            <edge source="StudentManager" target="Student">
+              <point x="57.5625" y="-114.0" />
+              <point x="2115.9994346590465" y="1557.0" />
+              <point x="2104.052083333333" y="1557.0" />
+              <point x="2104.052083333333" y="864.0" />
+              <point x="1054.7094742063482" y="864.0" />
+              <point x="154.125" y="59.0" />
+            </edge>
+            <edge source="AppUI" target="ViewCourseMenuUI">
+              <point x="25.384615384615245" y="-37.0" />
+              <point x="1574.6554487179485" y="3183.0" />
+              <point x="1791.6869346590468" y="3183.0" />
+              <point x="0.0" y="36.5" />
+            </edge>
+            <edge source="RegisterStudentUI" target="StudentManager">
+              <point x="158.33333333333326" y="-37.0" />
+              <point x="1359.7623314844434" y="3039.0" />
+              <point x="1606.6869346590468" y="3039.0" />
+              <point x="1606.6869346590468" y="2333.0" />
+              <point x="2014.579791801904" y="2333.0" />
+              <point x="-43.85714285714266" y="114.0" />
+            </edge>
+            <edge source="AppUI" target="StudentManager">
+              <point x="76.15384615384619" y="-37.0" />
+              <point x="1625.4246794871794" y="3223.0" />
+              <point x="2753.4369346590465" y="3223.0" />
+              <point x="2753.4369346590465" y="2313.0" />
+              <point x="2190.008363230475" y="2313.0" />
+              <point x="131.57142857142844" y="114.0" />
+            </edge>
+            <edge source="ProfessorManager" target="EntityManagerInterface">
+              <point x="121.125" y="-92.0" />
+              <point x="282.625" y="1557.0" />
+              <point x="1337.8768438663994" y="1557.0" />
+              <point x="-67.0" y="58.5" />
+            </edge>
+            <edge source="StudentManager" target="Component">
+              <point x="134.3125" y="-114.0" />
+              <point x="2192.7494346590465" y="1537.0" />
+              <point x="2126.052083333333" y="1537.0" />
+              <point x="2126.052083333333" y="280.0" />
+              <point x="1271.9594742063482" y="280.0" />
+              <point x="56.875" y="125.0" />
+            </edge>
+            <edge source="AddStudentUI" target="ScannerManager">
+              <point x="-70.25" y="-37.0" />
+              <point x="2532.1869346590465" y="3029.0" />
+              <point x="2007.6869346590468" y="3029.0" />
+              <point x="120.75" y="81.0" />
+            </edge>
+            <edge source="CourseManager" target="CustomException">
+              <point x="196.25" y="-202.0" />
+              <point x="1419.6923200568756" y="2303.0" />
+              <point x="1599.8536013257133" y="2303.0" />
+              <point x="1599.8536013257133" y="1557.0" />
+              <point x="1736.3173200568756" y="1557.0" />
+              <point x="-35.0" y="14.5" />
+            </edge>
+            <edge source="ViewStudentMenuUI" target="CourseManager">
+              <point x="-93.25" y="-25.5" />
+              <point x="2162.1869346590465" y="3049.0" />
+              <point x="2115.8119346590465" y="3049.0" />
+              <point x="2115.8119346590465" y="2787.0" />
+              <point x="1425.2994629140182" y="2787.0" />
+              <point x="201.85714285714266" y="202.0" />
+            </edge>
+            <edge source="RegisteredCourse" target="Component">
+              <point x="77.5" y="-158.0" />
+              <point x="1132.2094742063482" y="300.0" />
+              <point x="1203.7094742063482" y="300.0" />
+              <point x="-11.375" y="125.0" />
+            </edge>
+            <edge source="Professor" target="Person">
+              <point x="-45.5" y="-47.5" />
+              <point x="207.8125" y="1280.0" />
+              <point x="247.8125" y="1280.0" />
+              <point x="247.8125" y="696.0" />
+              <point x="230.9375" y="696.0" />
+              <point x="-67.125" y="81.0" />
+            </edge>
+            <edge source="AddCourseUI" target="CourseManager">
+              <point x="46.875" y="-37.0" />
+              <point x="533.39526799238" y="3039.0" />
+              <point x="1169.0844742063482" y="3039.0" />
+              <point x="1169.0844742063482" y="2817.0" />
+              <point x="1088.870891485447" y="2817.0" />
+              <point x="-134.57142857142867" y="202.0" />
+            </edge>
+            <edge source="StudentManager" target="RegisteredCourse">
+              <point x="95.9375" y="-114.0" />
+              <point x="2154.3744346590465" y="1547.0" />
+              <point x="2115.052083333333" y="1547.0" />
+              <point x="2115.052083333333" y="686.0" />
+              <point x="1143.2809027777769" y="686.0" />
+              <point x="88.57142857142867" y="158.0" />
+            </edge>
+            <edge source="RegistrationManager" target="CourseManager">
+              <point x="169.66666666666669" y="-36.5" />
+              <point x="990.8813791034911" y="2827.0" />
+              <point x="1021.5851771997327" y="2827.0" />
+              <point x="-201.8571428571429" y="202.0" />
+            </edge>
+            <edge source="AppUI" target="RegisterStudentUI">
+              <point x="-12.692307692307622" y="-37.0" />
+              <point x="1536.5785256410256" y="3173.0" />
+              <point x="1201.4289981511101" y="3173.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="AppUI" target="AddCourseUI">
+              <point x="-50.769230769230944" y="-37.0" />
+              <point x="1498.5016025641023" y="3203.0" />
+              <point x="486.52026799238" y="3203.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="CourseManager" target="Professor">
+              <point x="-117.75" y="-202.0" />
+              <point x="1105.6923200568756" y="2333.0" />
+              <point x="1097.2625" y="2333.0" />
+              <point x="1097.2625" y="1477.0" />
+              <point x="331.3125" y="1477.0" />
+              <point x="78.0" y="47.5" />
+            </edge>
+            <edge source="AddCourseUI" target="Professor">
+              <point x="-46.875" y="-37.0" />
+              <point x="439.64526799238" y="3039.0" />
+              <point x="333.5" y="3039.0" />
+              <point x="333.5" y="1547.0" />
+              <point x="253.3125" y="1547.0" />
+              <point x="0.0" y="47.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.33942428035043815" x="1576.717806823981" y="2059.0124221866527" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -436,10 +1524,24 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CZ2002_code_CQ</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

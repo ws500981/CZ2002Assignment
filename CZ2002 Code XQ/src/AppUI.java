@@ -1,7 +1,3 @@
-import javax.swing.text.StyleContext;
-import java.io.*;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AppUI {
@@ -25,7 +21,6 @@ public class AppUI {
 
 		do {
 			System.out.println("\nWelcome to the STUDENT COURSE REGISTRATION AND MARK ENTRY Application. Please select what you want to do.\n"
-					+ "0. Initialize Data\n"
 					+ "1. Add new student\n"
 					+ "2. Add new course\n"
 					+ "3. View student info\n"

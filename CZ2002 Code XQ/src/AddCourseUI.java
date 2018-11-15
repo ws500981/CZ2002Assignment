@@ -24,7 +24,7 @@ public class AddCourseUI {
         int vacancies = ScannerManager.testIntInput(messages, 1, 1000);
 
         messages = ScannerManager.createMessages("Enter number of Tutorial Groups: ", "Number of tutorial groups should a positive number!");
-        int numberOfTutGroups = ScannerManager.testIntInput(messages, 1);
+        int numberOfTutGroups = ScannerManager.testIntInput(messages, 0);
         String[] tutorialName = new String[numberOfTutGroups];
 
         for (int i = 0; i < tutorialName.length; i++) {
@@ -32,7 +32,7 @@ public class AddCourseUI {
         }
 
         messages = ScannerManager.createMessages("Enter number of Lab Groups: ", "Number of Lab Groups should be positive!");
-        String[] labName = new String[ScannerManager.testIntInput(messages, 1)];
+        String[] labName = new String[ScannerManager.testIntInput(messages, 0)];
         for (int i = 0; i < labName.length; i++) {
             labName[i] = ScannerManager.stringInput("Enter name of lab " + (i+1) + ": ").toLowerCase();
         }

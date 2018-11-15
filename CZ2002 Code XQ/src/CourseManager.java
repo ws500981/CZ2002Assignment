@@ -53,8 +53,6 @@ public class CourseManager implements EntityManagerInterface{
             }
 
             components.add(new Component(componentNames[0], componentWeights[0], 0));
-            System.out.println("Component name 0: " + componentNames[0]);
-            System.out.println("Component Weight 0: " + componentWeights[0]);
             System.out.println();
 
             for(int i=1; i<componentNames.length; i++){
@@ -94,7 +92,7 @@ public class CourseManager implements EntityManagerInterface{
 
         for (String key : courseList.keySet()) {
             Course course = courseList.get(key);
-            System.out.printf("%s \t %s \t %s \n", course.getCourseID(), course.getName(), course.getProfInCharge().getName());
+            System.out.printf("%10s \t %13s \t %s \n", course.getCourseID(), course.getName(), course.getProfInCharge().getName());
         }
     }
 
