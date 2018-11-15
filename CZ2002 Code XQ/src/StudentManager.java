@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class StudentManager {
+public class StudentManager  implements EntityManagerInterface{
 
     //map student id against student
     private HashMap<Integer, Student> allStudents;
@@ -13,7 +13,7 @@ public class StudentManager {
 
     public void readData() {
 
-        this.allStudents = DeserialiseDataStudent();
+        this.allStudents = (HashMap<Integer, Student>) deserializeData();
         System.out.println("Student List:");
         for (Integer key : allStudents.keySet()) {
             System.out.println(allStudents.get(key).getName() + ", " + key);
@@ -21,7 +21,7 @@ public class StudentManager {
         System.out.println();
     }
     public void writeData(){
-        SerialiseDataStudent(this.allStudents);
+        serialiseData(this.allStudents);
     }
 
     public void addStudent(String Name, int studentID) {
@@ -84,7 +84,7 @@ public class StudentManager {
 
     }
 
-    private static void SerialiseDataStudent(HashMap<Integer, Student> studentData){
+    private static void serialiseData(HashMap<Integer, Student> studentData){
 
         try {
             FileOutputStream fileOut =
@@ -99,8 +99,24 @@ public class StudentManager {
         }
     }
 
-    private HashMap<Integer, Student> DeserialiseDataStudent(){
-        HashMap<Integer, Student> studentData = null;
+	@Override
+	public void serializeData(Object data) {
+		try {
+            FileOutputStream fileOut =
+                    new FileOutputStream("data/students.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(data);
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized data is saved in data/student.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+	}
+
+	@Override
+	public Object deserializeData() {
+		HashMap<Integer, Student> studentData = null;
         try {
             FileInputStream fileIn = new FileInputStream("data/students.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -129,6 +145,6 @@ public class StudentManager {
         }
 
         return studentData;
-    }
+	}
 
 }

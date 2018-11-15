@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.HashMap;
 
-public class ProfessorManager {
+public class ProfessorManager implements EntityManagerInterface{
     private HashMap<Integer, Professor> allProfessors;
 
     public ProfessorManager() {
@@ -15,7 +15,7 @@ public class ProfessorManager {
 
     public void readData() {
 
-        this.allProfessors = DeserialiseDataProfessor();
+        this.allProfessors = (HashMap<Integer, Professor>) deserializeData();
         System.out.println("Professor List:");
         for (int key : allProfessors.keySet()) {
             System.out.println(allProfessors.get(key).getName() + ", " + key);
@@ -28,26 +28,27 @@ public class ProfessorManager {
     }
 
     public void writeData(){
-        SerialiseDataProfessor(this.allProfessors);
+        serializeData(this.allProfessors);
     }
 
-    private static void SerialiseDataProfessor(HashMap<Integer, Professor> professorData){
-
+	@Override
+	public void serializeData(Object data) {
         try {
             FileOutputStream fileOut =
                     new FileOutputStream("data/professors.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(professorData);
+            out.writeObject(data);
             out.close();
             fileOut.close();
             System.out.println("Serialized data is saved in data/professors.ser");
         } catch (IOException i) {
             i.printStackTrace();
         }
-    }
+	}
 
-    private HashMap<Integer, Professor> DeserialiseDataProfessor(){
-        HashMap<Integer, Professor> professorData = null;
+	@Override
+	public Object deserializeData() {
+		HashMap<Integer, Professor> professorData = null;
         try {
             FileInputStream fileIn = new FileInputStream("data/professors.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -76,5 +77,5 @@ public class ProfessorManager {
         }
 
         return professorData;
-    }
+	}
 }
