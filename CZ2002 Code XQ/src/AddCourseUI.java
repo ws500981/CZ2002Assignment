@@ -15,7 +15,7 @@ public class AddCourseUI {
 
         System.out.println("Professor List: ");
         for (Integer key : pManager.getAllProfessors().keySet()) {
-            System.out.printf("ID: %s \t Name: %s \n", pManager.getAllProfessors().get(key).getProfId(), pManager.getAllProfessors().get(key).getName());
+            System.out.printf("ID: %s \t Name: %s \n", pManager.getAllProfessors().get(key).getId(), pManager.getAllProfessors().get(key).getName());
         }
         System.out.println("Select from Professor list\nEnter ID of Prof in Charge: ");
         Professor professor = pManager.getAllProfessors().get(sc.nextInt());

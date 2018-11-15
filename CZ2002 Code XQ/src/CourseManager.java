@@ -16,7 +16,7 @@ public class CourseManager implements EntityManagerInterface{
         this.courseList = (SortedMap<String, Course>) deserializeData();
         System.out.println("Course List:");
         for (String key : courseList.keySet()) {
-            System.out.println(courseList.get(key).getName() + ", " + key);
+            System.out.println(key + ", " + courseList.get(key).getName());
         }
         System.out.println();
     }
@@ -144,7 +144,7 @@ public class CourseManager implements EntityManagerInterface{
                 marks = registeredCourse.calculateResults();
                 ArrayList<Component> marks_update = sManager.getAllStudents().get(i).getregisteredCourses().get(courseID).getComponents();
                 registeredCourse.setComponents(marks_update);
-                System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                 sum += marks;
             }
         }
@@ -166,7 +166,7 @@ public class CourseManager implements EntityManagerInterface{
                 Student student = studentList.get(i);
                 RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                 marks = registeredCourse.calculateResults();
-                System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                 sum += marks;
             }
             int average = sum/studentList.size();
@@ -180,7 +180,7 @@ public class CourseManager implements EntityManagerInterface{
                 Student student = studentList.get(i);
                 RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                 marks = registeredCourse.getComponents().get(0).getMarks();
-                System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                 sum_exam += marks;
             }
             int average_exam = sum_exam/studentList.size();
@@ -199,7 +199,7 @@ public class CourseManager implements EntityManagerInterface{
                     Student student = studentList.get(j);
                     RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                     marks = registeredCourse.getComponents().get(i).getMarks();
-                    System.out.println(student.getStudentID() + " " + student.getName() + ": " + marks);
+                    System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                     sum_coursework += marks;
                 }
                 int average_course = sum_coursework/studentList.size();
