@@ -9,3 +9,9 @@
 /StudentInCourse.class
 /Tutorial.class
 /AppUI.class
+/Professor.class
+/ProfessorManager.class
+/RegisteredCourse.class
+/RegistrationManager.class
+/ManagerInterface.class
+/EntityManagerInterface.class

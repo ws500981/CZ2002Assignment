@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class CourseManager{
+public class CourseManager implements EntityManagerInterface{
     private static Scanner sc = new Scanner(System.in);
     private SortedMap<String, Course> courseList;
     private Course course;
@@ -13,7 +13,7 @@ public class CourseManager{
     }
 
     public void readData(){
-        this.courseList = DeserialiseDataCourse();
+        this.courseList = (SortedMap<String, Course>) deserializeData();
         System.out.println("Course List:");
         for (String key : courseList.keySet()) {
             System.out.println(courseList.get(key).getName() + ", " + key);
@@ -22,7 +22,7 @@ public class CourseManager{
     }
 
     public void writeData(){
-        SerialiseDataCourse(this.courseList);
+        serializeData(this.courseList);
     }
 
 
@@ -294,8 +294,24 @@ public class CourseManager{
         return courseList;
     }
 
-    public SortedMap<String, Course> DeserialiseDataCourse(){
-        SortedMap<String, Course> courseData = null;
+	@Override
+	public void serializeData(Object data) {
+		try {
+            FileOutputStream fileOut =
+                    new FileOutputStream("data/courses.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(data);
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized data is saved in data/courses.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+	}
+
+	@Override
+	public Object deserializeData() {
+		SortedMap<String, Course> courseData = null;
         try {
             FileInputStream fileIn = new FileInputStream("data/courses.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -324,24 +340,5 @@ public class CourseManager{
             c.printStackTrace();
         }
         return courseData;
-    }
-
-
-
-    public static void SerialiseDataCourse(SortedMap<String, Course> courseData){
-
-        try {
-            FileOutputStream fileOut =
-                    new FileOutputStream("data/courses.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(courseData);
-            out.close();
-            fileOut.close();
-            System.out.println("Serialized data is saved in data/courses.ser");
-        } catch (IOException i) {
-            i.printStackTrace();
-        }
-    }
-
-
+	}
 }
