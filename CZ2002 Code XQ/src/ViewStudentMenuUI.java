@@ -11,19 +11,19 @@ public class ViewStudentMenuUI {
             System.out.println("Student ID not found.");
             return;
         }
+        
         int choice = 0;
+        String message = "Viewing StudentID " + sID + ": " + sManager.getAllStudents().get(sID).getName() + "\n"
+        		+ "1. Enter coursework marks\n"
+                + "2. Enter exam marks\n"
+                + "3. Print course list\n"
+                + "4. Exit to main menu\n";
+        String cID;
+        int marks;
+        RegisteredCourse registeredCourse = null;
+        Student student = null;
+        
         do {
-            
-            String message = "Viewing StudentID " + sID + ": " + sManager.getAllStudents().get(sID).getName() + "\n"
-            		+ "1. Enter coursework marks\n"
-                    + "2. Enter exam marks\n"
-                    + "3. Print course list\n"
-                    + "4. Exit to main menu\n";
-
-            String cID;
-            int marks;
-            RegisteredCourse registeredCourse = null;
-            Student student = null;
             choice = ScannerManager.testIntInput(message);
 
             switch (choice) {
