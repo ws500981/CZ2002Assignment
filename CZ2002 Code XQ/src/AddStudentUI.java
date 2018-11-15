@@ -1,20 +1,16 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddStudentUI {
 
     private static Scanner sc = new Scanner(System.in);
+    private static ArrayList<String> messages;
 
     public static void addStudentMenu(StudentManager sManager) {
-        // TODO Auto-generated method stub
-        System.out.println("Enter Student Name: ");
-        String Name = sc.nextLine();
-//        System.out.println("Enter Student ID: ");
-//        int studentID = sc.nextInt();
-        ArrayList<String> messages = ScannerTest.createMessages("Enter Student ID: ");
-        int studentID = ScannerTest.testIntInput(messages);
+        String name = ScannerManager.stringInput("Enter Student Name: ");
+        messages = ScannerManager.createMessages("Enter Student ID: ", "Student ID should not be 0 or negative!");
+        int studentID = ScannerManager.testIntInput(messages, 0);
 
-        sManager.addStudent(Name, studentID);
+        sManager.addStudent(name, studentID);
     }
 }

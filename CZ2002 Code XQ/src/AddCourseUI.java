@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddCourseUI {
@@ -8,22 +9,28 @@ public class AddCourseUI {
 
         System.out.println("Enter name of course: ");
         String name = sc.nextLine();
+
         System.out.println("Enter course ID: ");
         String ID = sc.nextLine();
+
         System.out.println("Professor List: ");
         for (Integer key : pManager.getAllProfessors().keySet()) {
             System.out.printf("ID: %s \t Name: %s \n", pManager.getAllProfessors().get(key).getProfId(), pManager.getAllProfessors().get(key).getName());
         }
-        System.out.println("Select from Professor list");
-        System.out.println("Enter ID of Prof in Charge: ");
+        System.out.println("Select from Professor list\nEnter ID of Prof in Charge: ");
         Professor professor = pManager.getAllProfessors().get(sc.nextInt());
+        do {
+            System.out.println("Unable to find professor! Please enter a valid ID: ");
+            professor = pManager.getAllProfessors().get(sc.nextInt());
+        }while(professor==null);
 
         System.out.println("Enter Vacancies: ");
-        int vacancies = sc.nextInt();
+        ArrayList<String> messages = ScannerManager.createMessages("Enter Vacancies: ", "Student ID should not be 0 or negative!");
+        int vacancies = ScannerManager.testIntInput(messages, 0);
 
-        System.out.println("Enter number of Tutorial Groups: ");
-        String[] tutorialName = new String[sc.nextInt()];
-        sc.nextLine();
+        messages = ScannerManager.createMessages("Enter number of Tutorial Groups: ", "Number of tutorial groups should not be 0 or negative!");
+        int numberOfTutGroups = ScannerManager.testIntInput(messages, 0);
+        String[] tutorialName = new String[numberOfTutGroups];
         for (int i = 0; i < tutorialName.length; i++) {
             System.out.printf("Enter name of tutorial %d: ", i+1);
             tutorialName[i] = sc.nextLine().toLowerCase();
