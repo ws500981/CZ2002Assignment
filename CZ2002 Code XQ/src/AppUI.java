@@ -62,11 +62,11 @@ public class AppUI {
 					courseManager.addCourse("Math", "m001", professorManager.getAllProfessors().get(102), 20, test1, test1, test1_names, test1_weight);
 
 
-					String [] test3 = {"e1", "e2"};
+					String [] test3 = {"p1", "p2"};
 					float [] test3_weight = {60f, 100f};
 					String [] test3_names = {"Exam", "Coursework"};
 
-					courseManager.addCourse("English", "e001", professorManager.getAllProfessors().get(103), 22, test3, test3, test3_names, test3_weight);
+					courseManager.addCourse("Physics", "p001", professorManager.getAllProfessors().get(103), 20, test3, test3, test3_names, test3_weight);
 
 
 

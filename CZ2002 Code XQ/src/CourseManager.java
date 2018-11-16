@@ -106,7 +106,6 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
     public void checkAvailSlots(String courseID) {
         try{
             Course course = findCourse(courseID);
-            course.setOriginalVacancy(20);
             System.out.println("Total Course Vacancy: ");
             System.out.println("There are " + course.getVacancy() + "/" + course.getOriginalVacancy() + " vacancies left");
             System.out.println();
@@ -115,7 +114,6 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
                 System.out.println("Tutorial Vacancy: ");
                 for (String key : course.getTutGroups().keySet()){
                     Tutorial tutorial = course.getTutGroups().get(key);
-                    tutorial.setOriginalVacancy(10);
                     System.out.printf("Tutorial Group %s has %d/%d vacancies left\n", tutorial.getGroupName(), tutorial.getVacancy(), tutorial.getOriginalVacancy());
                 }
                 System.out.println();
@@ -125,7 +123,6 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
                 System.out.println("Lab Vacancy");
                 for (String key : course.getLabGroups().keySet()){
                     Lab lab = course.getLabGroups().get(key);
-                    lab.setOriginalVacancy(10);
                     System.out.printf("Lab Group %s has %d/%d vacancies left\n", lab.getGroupName(), lab.getVacancy(), lab.getOriginalVacancy());
                 }
             }
