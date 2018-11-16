@@ -1,8 +1,12 @@
+/**
+ * Boundary class used only for viewing courses and its components
+ */
 public class ViewCourseMenuUI {
 
-    public ViewCourseMenuUI() {
-    }
-
+    /**
+     * UI that displays and interacts from menu to view course data
+     * @param cManager
+     */
     public static void viewCourseMenu(CourseManager cManager) {
         String cID = ScannerManager.stringInput("Please enter CourseID: ");
         if (!cManager.getCourseList().containsKey(cID)) {
@@ -40,6 +44,11 @@ public class ViewCourseMenuUI {
         } while (choice != 4);
     }
 
+    /**
+     * Method that prints list of students pertaining to the course and its components
+     * @param cManager
+     * @param cID
+     */
     private static void printStudentList(CourseManager cManager, String cID) {
 
         String lessonID;
@@ -54,7 +63,6 @@ public class ViewCourseMenuUI {
         do {
 
             choice = ScannerManager.testIntInput(message);
-//            sc.nextLine();
 
             switch (choice) {
                 case 1:
@@ -104,6 +112,4 @@ public class ViewCourseMenuUI {
 
         } while (choice != 5);
     }
-
-
 }

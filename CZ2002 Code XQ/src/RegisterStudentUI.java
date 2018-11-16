@@ -1,12 +1,14 @@
-import java.util.Scanner;
-
+/**
+ * Boundary class used only for registering students into course
+ */
 public class RegisterStudentUI {
 
-    private static Scanner sc = new Scanner(System.in);
-
-    public RegisterStudentUI() {
-    }
-
+    /**
+     * UI method to register student into course
+     * @param rManager
+     * @param cManager
+     * @param sManager
+     */
     public static void registerStudent(RegistrationManager rManager, CourseManager cManager, StudentManager sManager) {
         int sID = ScannerManager.testIntInput("Please enter Student ID: ");
         while(!sManager.getAllStudents().containsKey(sID)) {

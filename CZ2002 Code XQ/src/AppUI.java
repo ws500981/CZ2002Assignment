@@ -1,9 +1,19 @@
 import java.util.Scanner;
 
+/**
+ * Main Boundary class for the entire app
+ */
 public class AppUI {
 
+    /**
+     * Instantiate a scanner obect
+     */
 	static Scanner sc = new Scanner(System.in);
 
+    /**
+     * The Main method
+     * @param args
+     */
 	public static void main(String[] args) {
 
 		CourseManager courseManager = new CourseManager();

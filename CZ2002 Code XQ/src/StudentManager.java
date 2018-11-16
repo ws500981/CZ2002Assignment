@@ -1,17 +1,27 @@
 import java.io.*;
 import java.util.HashMap;
 
+/**
+ * Control class pertaining to student class
+ */
 public class StudentManager  implements EntityManagerInterface, IPrintStudentTranscript{
 
-    //map student id against student
+    /**
+     * HashMap of all students in the university, with keys of ID and values of student objects
+     */
     private HashMap<Integer, Student> allStudents;
 
+    /**
+     * Constructor for initialisation
+     */
     public StudentManager() {
         allStudents = new HashMap<>();
     }
 
+    /**
+     * Reads Data using deserializeData()
+     */
     public void readData() {
-
         this.allStudents = (HashMap<Integer, Student>) deserializeData();
         System.out.println("Student List:");
         for (Integer key : allStudents.keySet()) {
@@ -19,12 +29,20 @@ public class StudentManager  implements EntityManagerInterface, IPrintStudentTra
         }
         System.out.println();
     }
+
+    /**
+     * Writes Data using serializeData()
+     */
     public void writeData(){
         serializeData(this.allStudents);
     }
 
+    /**
+     * Logic to add student into university
+     * @param Name
+     * @param studentID
+     */
     public void addStudent(String Name, int studentID) {
-
         try{
             if (allStudents.containsKey(studentID)){
                 throw new CustomException("StudentID exists! Please try again!");
@@ -40,27 +58,39 @@ public class StudentManager  implements EntityManagerInterface, IPrintStudentTra
         }catch(CustomException e){
             System.out.println(e.getMessage());
         }
-
-
     }
 
+    /**
+     * Getter for HashMap of students
+     * @return
+     */
     public HashMap<Integer, Student> getAllStudents(){
-
         return this.allStudents;
-
     }
 
+    /**
+     * Method to input student's marks for exam for a chosen course
+     * @param studentID
+     * @param courseID
+     * @param marks
+     */
     public void enterMarksExam (int studentID, String courseID, int marks){
-
         allStudents.get(studentID).getregisteredCourses().get(courseID).getComponents().get(0).setMarks(marks);
-
     }
 
+    /**
+     * Method to cast ID from Integer type to String type
+      * @param ID
+     */
     public void print(int ID) {
         print(String.valueOf(ID));
-
     }
 
+    /**
+     * Implemented method from IPrintStudentTranscript interface
+     * Prints out the transcript of the student
+     * @param ID
+     */
     @Override
     public void print(String ID) {
         int studentID = Integer.parseInt(ID);
@@ -82,6 +112,10 @@ public class StudentManager  implements EntityManagerInterface, IPrintStudentTra
         }
     }
 
+    /**
+     * Writes into serializable
+     * @param data
+     */
 	@Override
 	public void serializeData(Object data) {
 		try {
@@ -97,6 +131,10 @@ public class StudentManager  implements EntityManagerInterface, IPrintStudentTra
         }
 	}
 
+    /**
+     * Read from serialisable
+     * @return
+     */
 	@Override
 	public Object deserializeData() {
 		HashMap<Integer, Student> studentData = null;
@@ -106,17 +144,7 @@ public class StudentManager  implements EntityManagerInterface, IPrintStudentTra
             studentData = (HashMap<Integer, Student>) in.readObject();
             in.close();
             fileIn.close();
-/*
-			System.out.println("size: " + studentData.size());
 
-			for(int i = 0; i<studentData.size(); i++){
-				System.out.println(studentData.get(i).getName());
-			}
-
-			for (Student student : studentData){
-				System.out.println(student.getName() + " " + student.getStudentID());
-			}
-			*/
         } catch (IOException i) {
             System.out.println("Student Data not found!");
             studentData = this.allStudents;

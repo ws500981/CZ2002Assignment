@@ -1,17 +1,31 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * Control class pertaining to courses
+ */
 public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
-    private static Scanner sc = new Scanner(System.in);
+    /**
+     * A SortedMap of courses
+     */
     private SortedMap<String, Course> courseList;
-    private Course course;
-    //private String[] componentName;
-    //private int[] componentWeight;
 
+    /**
+     * Instantiation of a course object
+     */
+    private Course course;
+
+    /**
+     * Constructor
+     * Instantiation of courseList
+     */
     public CourseManager() {
         courseList = new TreeMap<>();
     }
 
+    /**
+     * Reads data from serialisable using deserializeData()
+     */
     public void readData(){
         this.courseList = (SortedMap<String, Course>) deserializeData();
         System.out.println("Course List:");
@@ -21,14 +35,24 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         System.out.println();
     }
 
+    /**
+     * Writes data into serialisable using serializeData()
+     */
     public void writeData(){
         serializeData(this.courseList);
     }
 
-
-    //Exception: course already exists
-
-
+    /**
+     * Logic that adds a new course
+     * @param name
+     * @param ID
+     * @param prof
+     * @param vacancies
+     * @param tutNames
+     * @param labNames
+     * @param componentNames
+     * @param componentWeights
+     */
     public void addCourse(String name, String ID, Professor prof,
                           int vacancies, String[] tutNames, String[] labNames,
                           String[] componentNames, float[] componentWeights) {
@@ -86,8 +110,10 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
 
     }
 
-    //iterator pattern
-
+    /**
+     * Iterator pattern
+     * Prints out all courses
+     */
     private void printAllCourses(){
         System.out.println("Course Listing:");
         System.out.println("Course ID \t Course Title \t Professor in Charge");
@@ -98,8 +124,10 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
     }
 
-
-
+    /**
+     * Checks the number of vacancies of a course
+     * @param courseID
+     */
     public void checkAvailSlots(String courseID) {
         try{
             Course course = findCourse(courseID);
@@ -132,12 +160,23 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
     }
 
+    /**
+     * Set the marks allocated to exam component of chosen course
+     * @param sID
+     * @param cID
+     * @param marks
+     */
     public void enterMarksExam(int sID, String cID, int marks){
         Course course = getCourseList().get(cID);
         RegisteredCourse reg = course.getStudentsList().get(sID).getregisteredCourses().get(cID);
         reg.getComponents().get(0).setMarks(marks);
     }
 
+    /**
+     * NEVER USED
+     * @param courseID
+     * @param sManager
+     */
     public void update(String courseID, StudentManager sManager) {
         Course course = findCourse(courseID);
         if (course != null) {
@@ -158,6 +197,11 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
     }
 
+    /**
+     * Implemented method from IPrintCourseStats interface
+     * Prints out statistics of a chosen course
+     * @param courseID
+     */
     @Override
     public void print(String courseID) {
         Course course = findCourse(courseID);
@@ -217,9 +261,10 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
     }
 
-
-
-
+    /**
+     * Print a list of students in chosen course
+     * @param courseID
+     */
     public void printStudentList(String courseID) {
         Course course = findCourse(courseID);
         if (course != null) {
@@ -231,6 +276,12 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
     }
 
+    /**
+     * Prints list of students in a chosen lesson (tutorial/lab)
+     * @param courseID
+     * @param lessonID
+     * @param choice
+     */
     public void printStudentListLesson(String courseID, String lessonID, int choice){
         Course course = findCourse(courseID);
         Lesson lesson = null;
@@ -254,52 +305,29 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
 
     }
-    /*
-    public void printStudentListLab(String courseID, String labID){
-        Course course = findCourse(courseID);
-        Lab lab = course.getLabGroups().get(labID);
 
-        if (course != null) {
-            SortedMap<Integer, Student> students = lab.getStudentList();
-            System.out.println("There are " + students.size() + " students in " + lab.getGroupName());
-            for (int id : students.keySet()) {
-                System.out.println(id + " " + students.get(id).getName());
-            }
-        }
-    }
-
-    public void printStudentListTut(String courseID, String tutID){
-        Course course = findCourse(courseID);
-        Tutorial tut = course.getTutGroups().get(tutID);
-
-        if (course != null) {
-            SortedMap<Integer, Student> students = tut.getStudentList();
-            System.out.println("There are " + students.size() + " students in " + tut.getGroupName());
-            for (int id : students.keySet()) {
-                System.out.println(id + " " + students.get(id).getName());
-            }
-        }
-    }
-*/
-
-    //Exception: null exception
-
+    /**
+     * Private method that returns Course object from courseID
+     * @param courseID
+     * @return
+     */
     private Course findCourse(String courseID) {
-        /*
-        System.out.println("Course List:");
-        for (String key : courseList.keySet()) {
-
-            System.out.println("key " + key + " name " + courseList.get(key).getName());
-        }
-        */
         return courseList.get(courseID);
 
     }
 
+    /**
+     * Gets the SortedMap of courseList
+     * @return
+     */
     public SortedMap<String, Course> getCourseList() {
         return courseList;
     }
 
+    /**
+     * Writes into serialisable
+     * @param data
+     */
 	@Override
 	public void serializeData(Object data) {
 		try {
@@ -315,6 +343,10 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         }
 	}
 
+    /**
+     * Read from serialisable
+     * @return
+     */
 	@Override
 	public Object deserializeData() {
 		SortedMap<String, Course> courseData = null;
@@ -324,22 +356,10 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
             courseData = (SortedMap<String, Course>) in.readObject();
             in.close();
             fileIn.close();
-	/*
-			System.out.println("size: " + courseData.size());
-
-			for (Course course : courseData){
-				System.out.println(course.getName() + " " + course.getCourseID());
-			}
-			*/
 
         } catch (IOException i) {
             System.out.println("Course Data not found!");
             courseData = this.courseList;
-            /*
-            String fileSeparator = System.getProperty("file.separator");
-            String relativePath = "/data"+fileSeparator+"courses.ser";
-            File file = new File(relativePath);
-            */
             i.printStackTrace();
         } catch (ClassNotFoundException c) {
             System.out.println("Course class not found");

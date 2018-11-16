@@ -1,5 +1,18 @@
+/**
+ * Control class that is used by courses, registered courses and students
+ */
 public class RegistrationManager {
 
+    /**
+     * Logic to register student into course
+     * @param courseID
+     * @param studentID
+     * @param courseManager
+     * @param studentManager
+     * @param tutGroup
+     * @param labGroup
+     * @return
+     */
     public Boolean registerStudent(String courseID, int studentID, CourseManager courseManager, StudentManager studentManager, String tutGroup, String labGroup) {
 
         Course course = courseManager.getCourseList().get(courseID);
@@ -41,7 +54,12 @@ public class RegistrationManager {
         return registered;
     }
 
-    //check vacancies in lab/tut
+    /**
+     * Check vacancies in lab/tut
+     * @param lesson
+     * @param student
+     * @return
+     */
     private Boolean addStudentintoLesson(Lesson lesson, Student student){
         System.out.println("lesson " + lesson.getGroupName());
         if (lesson.getVacancy() > 0){

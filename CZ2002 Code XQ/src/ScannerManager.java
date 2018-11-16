@@ -1,12 +1,24 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Control class pertaining only to scanner
+ * Decentralises user inputs away from the other parts of the code
+ */
 public class ScannerManager {
 
+    /**
+     * Initialise scanner object
+     */
     private static Scanner sc = new Scanner(System.in);
 
+    /**
+     * Method to added many strings into an ArrayList of messages
+     * @param message1
+     * @param message2
+     * @return
+     */
     public static ArrayList<String> createMessages(String message1, String message2) {
         ArrayList<String> messages = new ArrayList<>();
         messages.add(message1);
@@ -14,12 +26,24 @@ public class ScannerManager {
         return messages;
     }
 
+    /**
+     * Blueprint method to enact scanner functionality accepting String values
+     * message refers to the message prompted to user for input
+     * @param message
+     * @return
+     */
     public static String stringInput(String message) {
     	//default string input
         System.out.println(message);
         return sc.nextLine();
     }
-    
+
+    /**
+     * Blueprint method to enact scanner functionality accepting Integer values, with exceptions included
+     * message refers to the message prompted to user for input
+     * @param message
+     * @return
+     */
     public static int testIntInput(String message) {
         //default int input
         boolean success;
@@ -40,6 +64,14 @@ public class ScannerManager {
         return myInt;
     }
 
+    /**
+     * Blueprint method to enact scanner functionality accepting Integer values, with exceptions included
+     * ArrayList of messages refers to the message prompted to user for input, as well as other messages prompted after exceptions are thrown
+     * lowerLimit sets the lower boundary in which an exception will be thrown if user input an integer lower than it
+     * @param messages
+     * @param lowerLimit
+     * @return
+     */
     public static int testIntInput (ArrayList < String > messages,int lowerLimit){
         //customizable int input that contains upper and lower limit and custom message. required to createMessages first
 
@@ -66,6 +98,14 @@ public class ScannerManager {
 
     }
 
+    /**
+     * Overloaded method
+     * upperLimit sets the upper boundary in which an exception will be thrown if user input an integer larger than it
+     * @param messages
+     * @param lowerLimit
+     * @param upperLimit
+     * @return
+     */
     public static int testIntInput (ArrayList < String > messages,int lowerLimit, int upperLimit){
         //customizable int input that contains upper and lower limit and custom message. required to createMessages first
 
