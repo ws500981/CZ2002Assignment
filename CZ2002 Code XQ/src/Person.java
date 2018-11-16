@@ -1,9 +1,9 @@
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public abstract class Person implements Serializable {
 
-    protected int Id;
-    protected String Name;
+    private int Id;
+    private String Name;
 
     public Person(int id, String name) {
         Name = name;
