@@ -3,17 +3,17 @@ import java.io.Serializable;
 /**
  * Entity Class for Person
  */
-public class Person implements Serializable {
+public abstract class Person implements Serializable {
 
     /**
      * Student's ID
      */
-    protected int Id;
+    private int Id;
 
     /**
      * Student's first and last name
      */
-    protected String Name;
+    private String Name;
 
     /**
      * Constructor to assign values to Id and Name

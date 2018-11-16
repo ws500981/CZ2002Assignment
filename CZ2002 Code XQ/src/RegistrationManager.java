@@ -28,6 +28,7 @@ public class RegistrationManager {
 
             if (course.getVacancy() <= 0) {
                 registered = false;
+                return registered;
             }
             else{
                 //add student into course student list and minus vacancy
@@ -40,6 +41,8 @@ public class RegistrationManager {
             }
             else{
                 registered = false;
+                System.out.println("There are no more vacancies in this tutorial or lab. Please choose another tutorial or lab group.");
+                return registered;
             }
 
             RegisteredCourse register = new RegisteredCourse(course.getName(), courseID, course.getComponents(), tutGroup, labGroup);
