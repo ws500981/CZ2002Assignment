@@ -1,9 +1,20 @@
 import java.util.ArrayList;
 
-public class AddCourseUI {
+/**
+ * Boundary class used only for adding courses
+ */
+public class AddCourseUI{
 
+    /**
+     * This is for console log purposes
+     */
     private static ArrayList<String> messages;
 
+    /**
+     * UI that adds a new course
+     * @param cManager
+     * @param pManager
+     */
     public static void addCourseMenu(CourseManager cManager, ProfessorManager pManager) {
 
         String name = ScannerManager.stringInput("Enter name of course: ");
@@ -68,16 +79,7 @@ public class AddCourseUI {
                     componentWeight[i] = (float) ScannerManager.testIntInput(messages, 1, 100);
                 }
             }
-
             cManager.addCourse(name, ID, professor, vacancies, tutorialName, labName, componentName, componentWeight);
         }
-
-//            System.out.println("sumOfWeightage: " + sumOfWeightage);
-
-//            for(float f : componentWeight) {
-//                System.out.println("Component weight " + f);
-//            }
-
-
     }
 }

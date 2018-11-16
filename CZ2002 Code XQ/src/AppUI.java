@@ -1,9 +1,19 @@
 import java.util.Scanner;
 
+/**
+ * Main Boundary class for the entire app
+ */
 public class AppUI {
 
+    /**
+     * Instantiate a scanner obect
+     */
 	static Scanner sc = new Scanner(System.in);
 
+    /**
+     * The Main method
+     * @param args
+     */
 	public static void main(String[] args) {
 
 		CourseManager courseManager = new CourseManager();
@@ -34,25 +44,26 @@ public class AppUI {
 			switch (choice) {
 				case 0:
 
-//					professorManager.addProf(101, "James Cameron");
-//					professorManager.addProf(102, "Steven Spielberg");
-//					professorManager.addProf(103, "Christopher Nolan");
-//					professorManager.addProf(104, "Stan Lee");
-//					studentManager.addStudent("Jet Li", 1001);
-//					studentManager.addStudent("Jay Chou", 1002);
-//					studentManager.addStudent("Ariana Grande", 1003);
-//					studentManager.addStudent("Leonardo DiCaprio", 1004);
-//					studentManager.addStudent("Jessie McCartney", 1005);
-//					studentManager.addStudent("Brad Pitt", 1006);
-//					studentManager.addStudent("Angelina Jolie", 1007);
-//					studentManager.addStudent("Taylor Swift", 1008);
-//					studentManager.addStudent("Mariah Carey", 1009);
-//					studentManager.addStudent("Justin Bieber", 1010);
-//					studentManager.addStudent("Katy Perry", 1011);
-//					studentManager.addStudent("Ed Sheeran", 1012);
-//					studentManager.addStudent("Demi Lovato", 1013);
-//					studentManager.addStudent("Paris Hilton", 1014);
-//					studentManager.addStudent("Selena Gomez", 1015);
+					professorManager.addProf(101, "James Cameron");
+					professorManager.addProf(102, "Steven Spielberg");
+					professorManager.addProf(103, "Christopher Nolan");
+					professorManager.addProf(104, "Stan Lee");
+					studentManager.addStudent("Jet Li", 1001);
+					studentManager.addStudent("Jay Chou", 1002);
+					studentManager.addStudent("Ariana Grande", 1003);
+					studentManager.addStudent("Leonardo DiCaprio", 1004);
+					studentManager.addStudent("Jessie McCartney", 1005);
+					studentManager.addStudent("Brad Pitt", 1006);
+					studentManager.addStudent("Angelina Jolie", 1007);
+					studentManager.addStudent("Taylor Swift", 1008);
+					studentManager.addStudent("Mariah Carey", 1009);
+					studentManager.addStudent("Justin Bieber", 1010);
+					studentManager.addStudent("Katy Perry", 1011);
+					studentManager.addStudent("Ed Sheeran", 1012);
+					studentManager.addStudent("Demi Lovato", 1013);
+					studentManager.addStudent("Paris Hilton", 1014);
+					studentManager.addStudent("Selena Gomez", 1015);
+					studentManager.addStudent("Joe Jonas", 1016);
 
 
 					String [] test1 = {"m1", "m2"};

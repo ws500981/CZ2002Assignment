@@ -1,10 +1,19 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
+/**
+ * Boundary class used only for adding students
+ */
 public class AddStudentUI {
 
+    /**
+     * This is for console log purposes
+     */
     private static ArrayList<String> messages;
 
+    /**
+     * UI that adds a new student
+     * @param sManager
+     */
     public static void addStudentMenu(StudentManager sManager) {
 
         String name = ScannerManager.stringInput("Enter Student Name: ");

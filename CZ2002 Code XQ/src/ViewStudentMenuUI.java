@@ -1,8 +1,14 @@
+/**
+ * Boundary class used only for viewing students
+ */
+
 public class ViewStudentMenuUI {
 
-    public ViewStudentMenuUI() {
-    }
-
+    /**
+     * UI that displays and interacts from menu to view student data
+     * @param sManager
+     * @param cManager
+     */
     public static void viewStudentMenu(StudentManager sManager, CourseManager cManager) {
         int sID = ScannerManager.testIntInput(ScannerManager.createMessages("Please enter StudentID: ", "Please enter a positive integer"), 0);
         if (!sManager.getAllStudents().containsKey(sID)) {
@@ -88,6 +94,4 @@ public class ViewStudentMenuUI {
 
         } while (choice != 4);
     }
-
-
 }
