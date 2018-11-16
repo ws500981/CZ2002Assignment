@@ -45,27 +45,34 @@ public class AddCourseUI {
 
         messages = ScannerManager.createMessages("Enter weightage of Exam: ", "Weightage should be between 1 and 100");
         int examWeight = ScannerManager.testIntInput(messages, 1, 100);
-        System.out.printf("Exam has a weightage of %d%%. Coursework will be allocated the remaining %d%%.\n", examWeight, 100-examWeight);
 
-        messages = ScannerManager.createMessages("Enter number of Coursework subcomponents: ", "Number of subcomponents should be positive!");
-        int numComponents = ScannerManager.testIntInput(messages, 1) + 1;
-        String[] componentName = new String[numComponents];
-        float[] componentWeight = new float[numComponents];
-        componentName[0] = "exam";
-        componentWeight[0] = examWeight;
+        if(examWeight == 100) {
+            System.out.println("Exam has a weightage of 100%. There are no courseworks in this course");
+            cManager.addCourse(name, ID, professor, vacancies, tutorialName, labName, null, null);
+        } else {
+            System.out.printf("Exam has a weightage of %d%%. Coursework will be allocated the remaining %d%%.\n", examWeight, 100 - examWeight);
 
-        for (int i = 1; i < numComponents; i++) {
-            componentName[i] = ScannerManager.stringInput("Enter name of component " + i + ": ").toLowerCase();
-            messages = ScannerManager.createMessages("Enter weightage of " + componentName[i] + " (upon 100%): ", "Weightage should be between 1 and 100!");
-            componentWeight[i] = (float) ScannerManager.testIntInput(messages, 1, 100);
+            messages = ScannerManager.createMessages("Enter number of Coursework subcomponents: ", "Number of subcomponents should be positive!");
+            int numComponents = ScannerManager.testIntInput(messages, 1) + 1;
+            String[] componentName = new String[numComponents];
+            float[] componentWeight = new float[numComponents];
+            componentName[0] = "exam";
+            componentWeight[0] = examWeight;
+
+            for (int i = 1; i < numComponents; i++) {
+                componentName[i] = ScannerManager.stringInput("Enter name of component " + i + ": ").toLowerCase();
+                messages = ScannerManager.createMessages("Enter weightage of " + componentName[i] + " (upon 100%): ", "Weightage should be between 1 and 100!");
+                componentWeight[i] = (float) ScannerManager.testIntInput(messages, 1, 100);
             }
+            cManager.addCourse(name, ID, professor, vacancies, tutorialName, labName, componentName, componentWeight);
+        }
 
 //            System.out.println("sumOfWeightage: " + sumOfWeightage);
 
 //            for(float f : componentWeight) {
 //                System.out.println("Component weight " + f);
 //            }
-        cManager.addCourse(name, ID, professor, vacancies, tutorialName, labName, componentName, componentWeight);
+
 
     }
 }

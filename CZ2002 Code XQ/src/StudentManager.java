@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.HashMap;
 
-public class StudentManager  implements EntityManagerInterface{
+public class StudentManager  implements EntityManagerInterface, IPrintStudentTranscript{
 
     //map student id against student
     private HashMap<Integer, Student> allStudents;
@@ -55,28 +55,20 @@ public class StudentManager  implements EntityManagerInterface{
         allStudents.get(studentID).getregisteredCourses().get(courseID).getComponents().get(0).setMarks(marks);
 
     }
-/*
-    public void enterMarksCoursework (int studentID, String courseID, int marks){
 
-        Student student = allStudents.get(studentID);
-        HashMap<String, RegisteredCourse> courses = student.getregisteredCourses();
-        RegisteredCourse course = courses.get(courseID);
-        ArrayList<Component> components = course.getComponents();
+    public void print(int ID) {
+        print(String.valueOf(ID));
 
-        for(Component c : components) {
-
-        }
     }
-*/
-    public void printStudentTranscript (int studentID){
 
+    @Override
+    public void print(String ID) {
+        int studentID = Integer.parseInt(ID);
         Student student = allStudents.get(studentID);
         HashMap<String, RegisteredCourse> courses = student.getregisteredCourses();
 
         System.out.println("Transcript\n");
-        System.out.println("Student ID: " + studentID + "Name: " + student.getName() + "" +
-                "\n");
-
+        System.out.println("Student ID: " + studentID + "Name: " + student.getName() + "" + "\n");
 
         for (String key : courses.keySet()) {
             System.out.println("Subject \t  Results");
@@ -88,7 +80,6 @@ public class StudentManager  implements EntityManagerInterface{
             }
             System.out.printf("%10s \t %6s \t %d \n", "total", 100, courses.get(key).calculateResults());
         }
-
     }
 
 	@Override

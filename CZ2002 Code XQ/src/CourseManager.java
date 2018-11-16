@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class CourseManager implements EntityManagerInterface{
+public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
     private static Scanner sc = new Scanner(System.in);
     private SortedMap<String, Course> courseList;
     private Course course;
@@ -41,25 +41,27 @@ public class CourseManager implements EntityManagerInterface{
 
             float courseWorkPercent = 0;
 
-            if (componentNames.length > 1){
-                for(int i = 1; i < componentWeights.length; i++){
-                    courseWorkPercent += componentWeights[i];
+            if(componentNames != null & componentWeights != null) {
+                if (componentNames.length > 1) {
+                    for (int i = 1; i < componentWeights.length; i++) {
+                        courseWorkPercent += componentWeights[i];
+                    }
+
+                    if (courseWorkPercent != 100.0) {
+                        System.out.println("Total coursework Weight not 100%! Course not added!");
+                        return;
+                    }
                 }
 
-                if (courseWorkPercent != 100.0){
-                    System.out.println("Total coursework Weight not 100%! Course not added!");
-                    return;
+                components.add(new Component(componentNames[0], componentWeights[0], 0));
+                System.out.println();
+
+                for (int i = 1; i < componentNames.length; i++) {
+                    float decimal_weight = componentWeights[0] / 100;
+                    float weight = (1 - decimal_weight) * componentWeights[i];
+
+                    components.add(new Component(componentNames[i], weight, 0));
                 }
-            }
-
-            components.add(new Component(componentNames[0], componentWeights[0], 0));
-            System.out.println();
-
-            for(int i=1; i<componentNames.length; i++){
-                float decimal_weight = componentWeights[0]/100;
-                float weight = (1-decimal_weight)*componentWeights[i];
-
-                components.add(new Component(componentNames[i],weight,0));
             }
 
             Map<String, Tutorial> tutorials = new TreeMap<>();
@@ -156,10 +158,10 @@ public class CourseManager implements EntityManagerInterface{
         }
     }
 
-
-    public void printCourseStatistics(String courseID) {
+    @Override
+    public void print(String courseID) {
         Course course = findCourse(courseID);
-        if(course!=null) {
+        if (course != null) {
             System.out.println("Course Statistics for " + courseID + " " + course.getName() + ":");
             int sum = 0;
             int marks = 0;
@@ -168,55 +170,53 @@ public class CourseManager implements EntityManagerInterface{
 
             System.out.println("Course Overall Statistics: ");
 
-            for(int i : studentList.keySet()) {
+            for (int i : studentList.keySet()) {
                 Student student = studentList.get(i);
                 RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                 marks = registeredCourse.calculateResults();
                 System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                 sum += marks;
             }
-            int average = sum/studentList.size();
+            int average = sum / studentList.size();
             System.out.println("Course Average: " + average);
             System.out.println();
             System.out.println("Course Exam Statistics");
             System.out.println();
             int sum_exam = 0;
 
-            for(int i : studentList.keySet()) {
+            for (int i : studentList.keySet()) {
                 Student student = studentList.get(i);
                 RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                 marks = registeredCourse.getComponents().get(0).getMarks();
                 System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                 sum_exam += marks;
             }
-            int average_exam = sum_exam/studentList.size();
+            int average_exam = sum_exam / studentList.size();
             System.out.println("Course Average: " + average_exam);
             System.out.println();
             System.out.println("Course CourseWork Statistics");
             System.out.println();
 
 
-
-            for (int i = 1; i < course.getComponents().size(); i++){
+            for (int i = 1; i < course.getComponents().size(); i++) {
                 int sum_coursework = 0;
                 System.out.printf("Course %s Statistics", course.getComponents().get(i).getName());
                 System.out.println();
-                for(int j : studentList.keySet()) {
+                for (int j : studentList.keySet()) {
                     Student student = studentList.get(j);
                     RegisteredCourse registeredCourse = student.getregisteredCourses().get(courseID);
                     marks = registeredCourse.getComponents().get(i).getMarks();
                     System.out.println(student.getId() + " " + student.getName() + ": " + marks);
                     sum_coursework += marks;
                 }
-                int average_course = sum_coursework/studentList.size();
+                int average_course = sum_coursework / studentList.size();
                 System.out.println("Course Average: " + average_course);
                 System.out.println();
             }
 
-
-
         }
-    }   //student.getregisteredCourses().get(key).calculateResults();
+    }
+
 
 
 

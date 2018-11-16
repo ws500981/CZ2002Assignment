@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class ViewStudentMenuUI {
 
     public ViewStudentMenuUI() {
@@ -79,7 +77,7 @@ public class ViewStudentMenuUI {
                     System.out.println("Exam marks entered");
                     break;
                 case 3:
-                    sManager.printStudentTranscript(sID);
+                    sManager.print(sID);
                     break;
                 case 4:
                     break;

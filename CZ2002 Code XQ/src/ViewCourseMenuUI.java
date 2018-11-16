@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class ViewCourseMenuUI {
 
     public ViewCourseMenuUI() {
@@ -27,7 +25,7 @@ public class ViewCourseMenuUI {
                     cManager.checkAvailSlots(cID);
                     break;
                 case 2:
-                    cManager.printCourseStatistics(cID);
+                    cManager.print(cID);
                     break;
                 case 3:
                     printStudentList(cManager, cID);
@@ -73,7 +71,13 @@ public class ViewCourseMenuUI {
 
                     lessonID = ScannerManager.stringInput("Enter Tutorial ID to print");
 
-                    cManager.printStudentListLesson(cID, lessonID, 0);
+                    try {
+                        cManager.printStudentListLesson(cID, lessonID, 0);
+                    }
+                    catch (NullPointerException e) {
+                        System.out.println("Tutorial ID invalid!");
+                        break;
+                    }
                     break;
                 case 4:
                     System.out.println("Lab IDs available: ");
@@ -85,7 +89,13 @@ public class ViewCourseMenuUI {
 
                     lessonID = ScannerManager.stringInput("Enter Lab ID to print");
 
-                    cManager.printStudentListLesson(cID, lessonID, 1);
+                    try {
+                        cManager.printStudentListLesson(cID, lessonID, 1);
+                    }
+                    catch (NullPointerException e) {
+                        System.out.println("Lab ID invalid!");
+                        break;
+                    }
                     break;
                 default:
                     System.out.println("Please enter a valid choice");
