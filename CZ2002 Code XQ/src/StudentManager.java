@@ -68,7 +68,7 @@ public class StudentManager  implements EntityManagerInterface, IPrintStudentTra
         HashMap<String, RegisteredCourse> courses = student.getregisteredCourses();
 
         System.out.println("Transcript\n");
-        System.out.println("Student ID: " + studentID + "Name: " + student.getName() + "" + "\n");
+        System.out.println("Student ID: " + studentID + "\nName: " + student.getName() + "" + "\n");
 
         for (String key : courses.keySet()) {
             System.out.println("Subject \t  Results");
