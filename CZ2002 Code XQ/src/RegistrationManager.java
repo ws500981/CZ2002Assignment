@@ -43,7 +43,7 @@ public class RegistrationManager {
 
     //check vacancies in lab/tut
     private Boolean addStudentintoLesson(Lesson lesson, Student student){
-
+        System.out.println("lesson " + lesson.getGroupName());
         if (lesson.getVacancy() > 0){
             lesson.getStudentList().put(student.getId(), student);
             lesson.setVacancy(lesson.getVacancy()-1);

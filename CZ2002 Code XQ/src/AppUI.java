@@ -83,6 +83,5 @@ public class AppUI {
 			}
 
 		} while (choice != 7);
-
 	}
 }
