@@ -68,7 +68,7 @@ public class ViewStudentMenuUI {
                 case 2:
                     cID = ScannerManager.stringInput("Please enter the exam's course code: ");
                     if (!(sManager.getAllStudents().get(sID).getregisteredCourses().containsKey(cID))){
-                        System.out.println("Student not registered to course!");
+                        System.out.println("Invalid course code entered!");
                         break;
                     }
                     marks = ScannerManager.testIntInput(ScannerManager.createMessages("Please enter your marks: ", "Please enter a valid mark"), 0, 100);

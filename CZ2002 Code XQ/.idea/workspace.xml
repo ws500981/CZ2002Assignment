@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6e0e8d-b76b-43bb-9647-3c0dbe0e8b37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/AddCourseUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/AddCourseUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/StudentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/StudentManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/RegisterStudentUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/RegisterStudentUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/ViewCourseMenuUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/ViewCourseMenuUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/ViewStudentMenuUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CZ2002_code_CQ/ViewStudentMenuUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddCourseUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCourseUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewCourseMenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewCourseMenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisterStudentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisterStudentUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewStudentMenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewStudentMenuUI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,12 +59,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="532" />
+          <entry key="java" value="1099" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="532" />
+          <entry key="JAVA" value="1099" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -83,14 +76,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="class" value="1" />
+          <entry key="java" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="23" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
     </session>
     <session id="-2132962879">
       <usages-collector id="statistics.lifecycle.project">
@@ -131,29 +130,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AddCourseUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="50" column="70" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RegistrationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RegisterStudentUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="107">
+              <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -161,13 +142,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="62" column="26" lean-forward="true" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+            <state relative-caret-position="175">
+              <caret line="68" column="66" lean-forward="true" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RegisterStudentUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ViewStudentMenuUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ViewCourseMenuUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
@@ -177,10 +176,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StudentManager.java">
+        <entry file="file://$PROJECT_DIR$/src/RegistrationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+            <state relative-caret-position="226">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -201,6 +200,7 @@
       <find>print</find>
       <find>error</find>
       <find>componentname</find>
+      <find>co</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,18 +212,18 @@
         <option value="$PROJECT_DIR$/Course.java" />
         <option value="$USER_HOME$/test/src/Component.java" />
         <option value="$PROJECT_DIR$/src/CustomException.java" />
-        <option value="$PROJECT_DIR$/src/RegisterStudentUI.java" />
         <option value="$PROJECT_DIR$/src/AppUI.java" />
         <option value="$PROJECT_DIR$/src/RegistrationManager.java" />
-        <option value="$PROJECT_DIR$/src/AddCourseUI.java" />
         <option value="$PROJECT_DIR$/src/IPrintCourseTranscript.java" />
         <option value="$PROJECT_DIR$/src/IPrintCourseStats.java" />
         <option value="$PROJECT_DIR$/src/IPrint.java" />
         <option value="$PROJECT_DIR$/src/IPrintStudentTranscript.java" />
         <option value="$PROJECT_DIR$/src/CourseManager.java" />
-        <option value="$PROJECT_DIR$/src/ViewStudentMenuUI.java" />
         <option value="$PROJECT_DIR$/src/StudentManager.java" />
         <option value="$PROJECT_DIR$/src/ViewCourseMenuUI.java" />
+        <option value="$PROJECT_DIR$/src/RegisterStudentUI.java" />
+        <option value="$PROJECT_DIR$/src/ViewStudentMenuUI.java" />
+        <option value="$PROJECT_DIR$/src/AddCourseUI.java" />
       </list>
     </option>
   </component>
@@ -233,9 +233,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="9" />
-    <option name="y" value="39" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="6" />
+    <option name="y" value="28" />
     <option name="width" value="1440" />
     <option name="height" value="794" />
   </component>
@@ -326,12 +326,12 @@
       <workItem from="1541695503898" duration="4000" />
       <workItem from="1542309434280" duration="7709000" />
       <workItem from="1542338299943" duration="339000" />
-      <workItem from="1542339367339" duration="1518000" />
+      <workItem from="1542339367339" duration="4099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10924000" />
+    <option name="totallyTimeSpent" value="13505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,7 +343,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="28" width="1440" height="794" extended-state="6" />
+    <frame x="6" y="28" width="1440" height="794" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19456366" />
@@ -446,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1012,20 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddCourseUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="50" column="70" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RegistrationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IPrint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1040,17 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="167" column="69" selection-start-line="167" selection-start-column="69" selection-end-line="167" selection-end-column="69" />
-          <folding>
-            <element signature="e#11787#11788#0" expanded="true" />
-            <element signature="e#11820#11821#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IPrintStudentTranscript.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1058,38 +1026,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RegisterStudentUI.java">
+    <entry file="file://$PROJECT_DIR$/src/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScannerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="62" column="26" lean-forward="true" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ViewStudentMenuUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StudentManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        <state relative-caret-position="200">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProfessorManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-883">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddStudentUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <folding>
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2467#2468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScannerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RegistrationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -1097,6 +1083,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ViewStudentMenuUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ViewStudentMenuUI.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RegisterStudentUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CourseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="68" column="66" lean-forward="true" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddCourseUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
         </state>
       </provider>
     </entry>

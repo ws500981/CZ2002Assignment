@@ -58,12 +58,17 @@ public class AddCourseUI {
             float[] componentWeight = new float[numComponents];
             componentName[0] = "exam";
             componentWeight[0] = examWeight;
-
-            for (int i = 1; i < numComponents; i++) {
-                componentName[i] = ScannerManager.stringInput("Enter name of component " + i + ": ").toLowerCase();
-                messages = ScannerManager.createMessages("Enter weightage of " + componentName[i] + " (upon 100%): ", "Weightage should be between 1 and 100!");
-                componentWeight[i] = (float) ScannerManager.testIntInput(messages, 1, 100);
+            if(numComponents == 2) {
+                componentName[1] = ScannerManager.stringInput("Enter name of component: ").toLowerCase();
+                componentWeight[1] = 100;
+            } else {
+                for (int i = 1; i < numComponents; i++) {
+                    componentName[i] = ScannerManager.stringInput("Enter name of component " + i + ": ").toLowerCase();
+                    messages = ScannerManager.createMessages("Enter weightage of " + componentName[i] + " (upon 100%): ", "Weightage should be between 1 and 100!");
+                    componentWeight[i] = (float) ScannerManager.testIntInput(messages, 1, 100);
+                }
             }
+
             cManager.addCourse(name, ID, professor, vacancies, tutorialName, labName, componentName, componentWeight);
         }
 
