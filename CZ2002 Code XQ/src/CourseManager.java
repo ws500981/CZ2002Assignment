@@ -12,6 +12,9 @@ public class CourseManager implements EntityManagerInterface, IPrintCourseStats{
         courseList = new TreeMap<>();
     }
 
+    /**
+     * This
+     */
     public void readData(){
         this.courseList = (SortedMap<String, Course>) deserializeData();
         System.out.println("Course List:");
